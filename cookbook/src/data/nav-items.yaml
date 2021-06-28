@@ -1,0 +1,25 @@
+- title: Introduction
+  pages:
+    - path: /introduction
+- title: Quick Start
+  pages:
+    - title: Prerequisites
+      path: /quick-start/prerequisites/
+    - title: Set up IBM Watson Assistant
+      path: /quick-start/setup-wa/
+    - title: Deploying your virtual assistant
+      path: /quick-start/deploy-assistant/
+- title: Guidance
+  pages:
+    - title: Designing a conversation architecture
+      path: /guidance/conversation-architecture
+    - title: Linking to pages in SPM
+      path: /guidance/link-spm
+  hasDivider: true
+- title: Feedback
+  pages:
+    - title: Contact Us
+      path: /feedback/
+- title: Disclaimer
+  pages:
+    - path: /disclaimer/
