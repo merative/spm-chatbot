@@ -5,6 +5,9 @@ node_js:
 group: bluezone
 dist: xenial
 
+before_install:
+  cd cookbook
+
 install:
   - npm install -g markdownlint-cli
   - npm ci
@@ -27,4 +30,3 @@ deploy:
     target_branch: gh-pages
     on:
       branch: master
-      
