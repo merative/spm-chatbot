@@ -5,17 +5,16 @@ node_js:
 group: bluezone
 dist: xenial
 
+before_install:
+  cd cookbook
+
 install:
   - npm install -g markdownlint-cli
   - npm ci
-  - pip install --user linkchecker
-  - sed -i "s/TRAVIS_HOST/$(hostname -f)/" linkcheckerrc
 
 script:
-  - markdownlint **/*.mdx
   - npm run build
   - docker run --rm -d --name gatsby -p 8888:80 -v $(pwd)/public:/usr/local/apache2/htdocs$SITE_PREFIX httpd:2.4
-  - linkchecker http://$(hostname -f):8888$SITE_PREFIX --config=./linkcheckerrc
 
 deploy:
   - provider: pages
@@ -27,4 +26,3 @@ deploy:
     target_branch: gh-pages
     on:
       branch: master
-      
