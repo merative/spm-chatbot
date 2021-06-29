@@ -2,9 +2,6 @@ language: node_js
 node_js:
   - "12"
 
-group: bluezone
-dist: xenial
-
 before_install:
   cd cookbook
 
@@ -20,7 +17,7 @@ script:
 deploy:
   - provider: pages
     skip_cleanup: true
-    local_dir: public
+    local_dir: cookbook/public
     github_token: $GITHUB_TOKEN
     github_url: github.com
     committer_from_gh: true
