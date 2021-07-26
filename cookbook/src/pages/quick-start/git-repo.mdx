@@ -1,0 +1,31 @@
+---
+title: GitHub repo
+description: GitHub repo
+---
+
+This runbook and its associated artifacts are provisioned through GitHub.
+
+Download the [spm-chatbot](https://github.com/IBM/spm-chatbot)
+repository on your development system and use the steps in the next sections.
+
+## Install Git
+
+Git is the distributed version control system on which GitHub is built. Usually Git is already included on development systems. If Git is missing, however, you can get it from [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+## Before you begin
+
+To clone the repository locally, use the command:
+
+```shell
+git clone https://github.com/IBM/spm-chatbot
+```
+
+The Git clone command creates a folder that is named `spm-chatbot` in your current path. This folder is referred to as `$SPM_CHATBOT_HOME` for the remainder of this runbook. The following list outlines the three subfolders in the `$SPM_CHATBOT_HOME` folder:
+
+* *src/pages:* The folder contains the source files for this runbook. Do not modify the source files.
+* *functions:* The folder contains the Function® files that are used to retrieve data from the IBM® Cúram Social Program Management (SPM) application. For more information, see [Creating a function](../deployment/creating-a-function).
+* *skills:* The folder contains the sample skill that you can import into your IBM Watson Assistant. For more information, see [Importing a skill](../deployment/importing-a-skill).
+
+If you want to make local modifications to any of these files, you must create a local branch so that you can continue to pull the latest code from the master branch without accidentally overriding any local change.
+
+However, IBM does not currently support any external contributions, such as pull requests and forks, to this repository.

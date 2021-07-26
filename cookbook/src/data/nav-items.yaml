@@ -7,8 +7,8 @@
       path: /quick-start/prerequisites/
     - title: Set up IBM Watson Assistant
       path: /quick-start/setup-wa/
-    - title: Deploying your virtual assistant
-      path: /quick-start/deploy-assistant/
+    - title: Github repo
+      path: /quick-start/git-repo/
 - title: Guidance
   pages:
     - title: Designing a conversation architecture
