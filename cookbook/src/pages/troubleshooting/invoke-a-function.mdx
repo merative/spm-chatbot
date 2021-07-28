@@ -1,14 +1,14 @@
 ---
-title: Start a function in IBM Cloud Functions
-description: How to start a function directly by using the IBM Cloud Functions service
+title: Start an action in IBM Cloud Functions
+description: How to start an action directly by using the IBM Cloud Functions service
 ---
 
 <u>Table of Contents</u>
 
-* [Start the function](#start-the-functions)
+* [Start the action](#start-the-actions)
   * [Start flows](#start-flows)
     * [Start with parameters](#start-with-parameters)
-  * [Start Person or verifications functions](#start-person-or-verifications-functions)
+  * [Start Person or verifications actions](#start-person-or-verifications-actions)
 * [Sample expected results](#sample-expected-results)
 * [Troubleshooting issues](#Troubleshooting-issues)
   * [No parameter entered](#no-parameter-entered)
@@ -16,13 +16,13 @@ description: How to start a function directly by using the IBM Cloud Functions s
   * [Authorization expired](#authorization-expired)
   * [Not able to view end of the logs](#not-able-to-view-end-of-the-logs)
 
-## Start the Functions
+## Start the Actions
 
-As part of the IBM Cloud Functions service, you can run each of the functions that are created to view the expected JSON or HTML format that is outputted as part of each request.
+As part of the IBM Cloud Functions service, you can run each of the actions that are created to view the expected JSON or HTML format that is outputted as part of each request.
 
 You might want to modify the existing sample Java script code that is provided to call your own custom REST APIs or display different fields in the chatbot based on your own requirements.
 
-Before you start the `caseworker` function, you need to update the authorization to include a valid bearer token where you can retrieve from the server.
+Before you start the `caseworker` IBM Cloud Functions action, you need to update the authorization to include a valid bearer token where you can retrieve from the server.
 
 The following list outlines how to update the authorization to include a valid bearer token where you can retrieve from the server:
 
@@ -39,7 +39,7 @@ The following list outlines how to update the authorization to include a valid b
 
     </Caption>
 
-5. From the `caseworker` function code, comment out the following line:
+5. From the `caseworker` action javascript code, comment out the following line:
 
     ```shell
     //const authorization = 'Bearer ' + params.__ow_headers.authorization;`. 
@@ -59,18 +59,18 @@ The following list outlines how to update the authorization to include a valid b
 
 ### Start flows
 
-The `caseworker` function is the main function that calls into the `person` and `verifications` functions to retrieve the required data to be sent back to be displayed in the web chat window.
+The `caseworker` action is the main action that calls into the `person` and `verifications` actions to retrieve the required data to be sent back to be displayed in the web chat window.
 
-There are currently four different flows available in the sample functions that call out to the external system to retrieve the information.
+There are currently four different flows available in the sample actions that call out to the external system to retrieve the information.
 
-The four flows can be started directly by using the `caseworker` function or else you can use the `person` or `verification` functions to run the individual flows.
+The four flows can be started directly by using the `caseworker` action or else you can use the `person` or `verification` actions to run the individual flows.
 
 The following steps outline how to start the four flows:
 
 1. From `Functions` > `Actions` > `curam-rest` package, select the  `caseworker` function.
 2. From the `Code` left navigation section of the page, select `Invoke with parameters` and enter one of the following parameters depending on the flow that you want to test out and click `Save`.
 
-The following table lists the four different flows available in the sample functions:
+The following table lists the four different flows available in the sample actions:
 
 | Flow | Start with parameters | Description |
 | :-------------- | :------ |:------ |
@@ -94,7 +94,7 @@ The following steps outline how to start with parameters:
 
 </Caption>
 
-### Start person or verifications functions
+### Start person or verifications actions
 
 To troubleshoot, run the `person` or `verifications` flows directly to add more `console.log()` outputs to troubleshoot if things are not working as you expected.
 
