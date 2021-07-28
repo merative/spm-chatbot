@@ -1,23 +1,7 @@
 ---
-title: Set up IBM Watson Assistant
-description: Options for how to set up IBM Watson Assistant
+title: Set up IBM Watson Assistant and IBM Cloud Functions
+description: Options for how to set up IBM Watson Assistant and IBM Cloud Functions
 ---
-
-Decide how you want to set up your IBM Watson Assistant instance. The following list outlines two scenarios that you can use:
-
-+ Use an IBM Watson Assistant instance on the IBM public cloud.
-+ Deploy IBM Watson Assistant on your private cloud or data center by using IBM Red Hat OpenShift and IBM Cloud Pak for Data.
-
-Set up your IBM Watson Assistant and you are ready to start working:
-
-+ Import the sample skills to Watson Assistant.
-+ Set up the sample functions in IBM Cloud Functions.
-
-Refer to our superb guidance and let your creative juices flow!
-
-**OR**
-
-# Set up IBM Watson Assistant and IBM Cloud Functions
 
 ### Decide how you want to set up your IBM Watson Assistant and IBM Cloud Functions instances
 
@@ -34,9 +18,9 @@ The following list outlines the steps required to set up IBM Watson Assistant an
 
 + IBM Cloud Functions:
   + [Create](/functions/create-a-function) as many actions in IBM Cloud Functions as required based on the number of sample actions provided.
-  + Add the sample code for the actions to your IBM Cloud Functions service from the [Git repository]() and [customize and enable the actions](/functions/edit-a-function). 
+  + Add the sample code for the actions to your IBM Cloud Functions service from the [Git repository](https://github.com/IBM/spm-chatbot/) and [customize and enable the actions](/functions/edit-a-function). 
 + IBM Watson Assistant:
-  + [Import the sample dialog skills](/skills/importing-a-skill) into your Watson Assistant instance from the `CaseworkerAssistantDemo.json` file in the [Git repository]().
+  + [Import the sample dialog skills](/skills/importing-a-skill) into your Watson Assistant instance from the `CaseworkerAssistantDemo.json` file in the [Git repository](https://github.com/IBM/spm-chatbot/).
   + [Configure the dialog skill webhook](/skills/configuring-a-webhook) to specify the correct URL for your Cloud Function action.
   + You may want to [update the chatbot's conversation starter text](/skills/web-chat-ui) on the home screen
   + Read the [user guide](/virtual-assistant-in-spm/virtual-assistant-user-guide) on how to use your virtual assistant, and what questions it can be asked.

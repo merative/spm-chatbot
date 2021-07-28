@@ -9,12 +9,13 @@ You will need:
 
 + An IBM Cloud account.
 + An instance of an IBM Watson Assistant service.
-+ Access to IBM Cloud Functions. 
++ Access to IBM Cloud Functions.
 
 All of the above may be done through the [IBM Cloud site](https://cloud.ibm.com/).
 
-Both cloud services are required, because Watson Assistant will need to make API calls to SPM to retreive data. The Watson Assistant dialog skills may be configured to trigger a wehook, which is a HTTP POST request to a URL specified in the webhook definition. 
-Because many of the APIs in SPM used to retrieve data are GET requests, an intermediate service that accepts a POST request is required. This is achieved using IBM Cloud Functions, which is a Functions-as-a-Service (FaaS) platform. 
+Both cloud services are required, because Watson Assistant will need to make API calls to SPM to retreive data.
+The Watson Assistant dialog skills may be configured to trigger a wehook, which is a HTTP POST request to a URL specified in the webhook definition.
+Because many of the APIs in SPM used to retrieve data are GET requests, an intermediate service that accepts a POST request is required. This is achieved using IBM Cloud Functions, which is a Functions-as-a-Service (FaaS) platform.
 
 ## Integrating with IBM® Cúram Social Program Management (SPM)
 
@@ -30,7 +31,7 @@ The following list outlines the steps you need to follow to integrate with SPM:
 
 1. [Configure the virtual assistant in SPM](https://www.ibm.com/docs/en/spm/8.0.0?topic=assistant-configuring-watson-settings).
 2. Set up a keystore and signer certificate for [JSON Web Token (JWT) authentication in SPM](https://www.ibm.com/docs/en/spm/8.0.0?topic=assistant-generating-jwt-keystore-certificates).
-3.  [Add the public key certificate](https://www.ibm.com/docs/en/spm/8.0.0?topic=certificates-adding-public-key-watson-assistant) to your Watson Assistant instance.
+3. [Add the public key certificate](https://www.ibm.com/docs/en/spm/8.0.0?topic=certificates-adding-public-key-watson-assistant) to your Watson Assistant instance.
 4. Configure your application server to support JWT:
 
 + **SPM deployed on IBM Websphere or Oracle Weblogic:**
@@ -50,5 +51,3 @@ The following list outlines the steps you need to follow to integrate with SPM:
   Therefore full functionality is unavailable if SPM is running locally on Tomcat.
 
 Now you are ready to deploy the sample skills to your Watson Assistant instance and get rocking!
-
-
