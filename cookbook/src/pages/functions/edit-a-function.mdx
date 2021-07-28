@@ -1,0 +1,50 @@
+---
+title: Edit an IBM Cloud Function action
+description: How to edit an IBM Cloud Function action
+---
+
+## Introduction
+
+Use the proceeding steps to edit the IBM Cloud Function action that you created to include the sample code that is provided as part of the Git repository.
+
+For information about how to invoke your action or any troubleshooting issues that you encounter, see [Troubleshooting](../troubleshooting/invoke-a-function.md).
+
+## Edit actions
+
+Copy the content from each of the sample actions to your newly created actions.
+
+### Edit the caseworker action
+
+The following steps outline how to edit the caseworker action:
+
+1. From `Functions` > `Actions` > `curam-rest` package, select the `caseworker` action.
+2. From the left navigation section, select `Code`.
+3. Copy the content of the `caseworker.js` and paste it into the code section.
+4. Click `Save`.
+5. From the left navigation section, select `Endpoints`, select `Enable as Web Action` and click `Save`.
+6. Copy the URL under Web Actions.
+7. Go back to the `Code` section, and update the value for the `cfEndpoint` const to paste the value of the URL.
+8. Remove the `caseworker.json` at the end. For example:
+
+    ```
+    https://eu-gb.functions.appdomain.cloud/api/v1/web/<name>ie.ibm.com_org_dev/curam-rest/
+    ```
+    
+9. Click `Save`.
+
+### Edit the person and verifications actions
+
+The following steps outline how to edit the person and verifications actions:
+
+1. From `Functions` > `Actions` > `curam-rest` package, select the `person` action.
+2. From the left navigation section, select `Code`.
+3. Copy the content of the `person.js` and paste it into the code section.
+4. Update the value for the `env` const to point to your environment. For example:
+
+    ```
+    https://<server-name>
+    ```
+
+5. Click `Save`.
+6. From the left navigation section, select `Endpoints`, select `Enable as Web Action` and click `Save`.
+7. To edit the `verifications` action by using the content from the `verifications.js`, repeat the steps.
