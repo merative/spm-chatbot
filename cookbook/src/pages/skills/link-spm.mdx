@@ -1,0 +1,61 @@
+---
+title: Linking to Social Program Management
+description: Details of how to create links in the Virtual Assistant to pages in Social Program Management.
+---
+
+The following section details how to create a link in the Virtual Assistant that will link to a page in IBM® Cúram Social Program Management. In this example a URL link is configured in a dialog skill to link to the person notes list page.
+
+1. Log into [IBM Cloud](https://cloud.ibm.com).
+2. Select ‘Launch Watson Assistant’.
+3. Select the chatbot dialog skill created.
+4. Create a new intent and enter the intent name, for example `#SPL_See_The_Case_Notes_Link`.
+5. Add a new dialog node to the skills.
+
+   * Enter the node name, for example `See The Case Notes Link`.
+   * Enter `If assistant recognizes` with a value `#SPL_See_The_Case_Notes_Link` from the intent created above.
+   * Enter the `Then set context` variable names and values used within this node to create a link. In this example set the following context variables:
+
+   | Context variable  name | Value   | Description |
+   | --------- | ----------- | ------- |
+   | `uim` | Person_listNote | The uim link for a persons notes list page. |
+   | `concernRoleID` | $personID | The page parameter name and value required for the url to access the application page. |
+   | `preferredTabList` | PersonHome | The `preferredTabList` defines the navigation tab required to navigate to the correct page where there are multiple paths to access this page within the application. |
+   | `pretext` |  | The text shown before a link within the chatbot. If there is no pretext the value is empty. |
+
+6. Select to open the JSON editor
+   * The context variables defined above can be viewed and edited within the JSON definition.
+   * Add the `user_defined` JSON object as shown below in the code extract. The parameters are defined within the JSON `user_defined` properties including `path`, `response_body` and `preferred_tab_list`.
+   * The full context pattern `<?context['<context variable name>']?>` is used for text variables or the short place holder format where the attribute is preceded by the dollar character `$`.
+   For example `$<context variable name>` is used to hold an attribute value. The attributes are then inserted in to the user defined property values at run time.
+
+```
+		 {
+			"output": {
+			    "generic": [
+			      {
+			        "user_defined": {
+				        "name": "responseWithNavigation",
+				        "path": "<?context['uim']?>?concernRoleID=$personID",
+				        "action_text": "See client notes for $personFullName",
+				        "response_body": "<?context['pretext']?>",
+				        "preferred_tabs_list": "<?context['preferredTabList']?>"
+			        },
+			        "response_type": "user_defined"
+			      }
+			    ]
+			},
+			"context": {
+			    "uim": "Person_listNote",
+			    "pretext": "",
+			    "concernRoleID": "$personID",
+			    "personFullName": "$personFullName",
+			    "preferredTabList": "PersonHome"
+			}
+		 }
+```
+
+1. Open the calling dialog node and select 'Jump to' from the dropdown in the `Then assistant should` section. Select the node `#SPL_See_The_Case_Notes_Link` created above to jump to.
+2. Test the link in the running application and validate the link opens the correct page in the application.
+
+Alternatively the links can be added to the JSON Editor response body or returned as a parameter from a Cloud Function action.
+The parameter values to create the links can be user input, values returned from a Cloud Function action or values defined as context variables set in other dialog nodes.

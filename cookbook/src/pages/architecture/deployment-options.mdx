@@ -1,0 +1,51 @@
+---
+title: Deployment options
+description: Deployment options
+---
+
+## Option 1: IBM Watson™ Assistant as Service on IBM public cloud
+
+The following figure outlines the first option for deploying IBM Watson™ Assistant (WA) as a Service on IBM public cloud. Where needed and decided by the customer, a virtual private network (VPN) can be included.
+
+The following list outlines the possible challenges that are associated with this option:
+
+1. It might require data to be shared outside the country or state.
+2. The case data is logged in WA as it is a public cloud.
+
+![deployment-option1-public-cloud](../../images/deployment-option1-public-cloud.png)
+
+<Caption>
+
+*Figure 1: IBM Watson Assistant as Service on IBM public cloud.*
+
+</Caption>
+
+## Option 2a: IBM Watson™ Assistant in private cloud
+
+The following figure outlines the option where you can deploy WA in a private cloud that is either hosted by a cloud provider or within the customer’s own data center.
+
+![deployment-option2a-private-cloud](../../images/deployment-option2a-private-cloud.png)
+
+<Caption>
+
+*Figure 2: IBM Watson™ Assistant in private cloud.*
+
+</Caption>
+
+For further information about how to deploy WA in a private cloud, see the [Cartridges for IBM Cloud Pak for Data](https://www.ibm.com/products/cloud-pak-for-data/cartridges).  
+
+## Option 2b: IBM Watson™ Assistant in private cloud (co-deployed with SPM)
+
+This is similar to the preceding option, except that WA is  co-deployed with SPM in a private cloud that is either hosted by a cloud provider or within the customer’s own data center.
+
+Therefore, you don’t need a VPN for the interactions between WA and SPM. The following figure shows how SPM could be deployed on OpenShift as well.
+
+![deployment-option2b-private-cloud](../../images/deployment-option2b-private-cloud.png)
+
+<Caption>
+
+*Figure 3: IBM Watson™ Assistant in private cloud (co-deployed with SPM).*
+
+</Caption>
+
+For further information about how to deploy WA in a private cloud, see [Cartridges for IBM Cloud Pak for Data](https://www.ibm.com/products/cloud-pak-for-data/cartridges).
