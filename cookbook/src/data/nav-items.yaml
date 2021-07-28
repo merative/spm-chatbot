@@ -40,9 +40,9 @@
       path: /skills/link-spm
 - title: Troubleshooting
   pages:
-    - title: Displaying web chat in SPM
+    - title: Displaying the chatbot in SPM
       path: /troubleshooting/web-chat-not-displaying
-    - title: Invoke a function
+    - title: Invoke a Cloud Function action
       path: /troubleshooting/invoke-a-function 
   hasDivider: true
 - title: Virtual assistant user guide
