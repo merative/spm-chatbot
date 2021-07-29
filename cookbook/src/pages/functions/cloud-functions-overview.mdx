@@ -1,0 +1,17 @@
+---
+title: About IBM Cloud Functions
+description: About IBM Cloud Functions
+---
+
+IBM Cloud™ Functions is a Functions-as-a-Service (FaaS) platform, allowing for the connection and extension of cloud services.
+With IBM Cloud Functions, you can create stateless code snippets, called actions, that are set to perform one specific task.
+
+### How are IBM Cloud Functions actions used in the Virtual Assistant
+
+The sample IBM Watson Assistant dialog skill provided is configured  to trigger a webhook. A webhook is a HTTP POST request to a URL specified in the webhook definition.
+Because many of the APIs in SPM used to retrieve data are GET requests, an intermediate service that accepts a POST request is required. This is achieved using IBM Cloud Functions actions.
+
+The sample code provided contains a number of files to be used as IBM Cloud Functions actions.
+When invoked from IBM Watson Assistant, these actions will make a REST API call to SPM to retrieve the necessary data required to assist the caseworker.
+
+See the [Architecture overview](/architecture/arch-overview) for more details on how IBM Cloud Functions integrates with IBM Watson Assistant and IBM Social Program Management.
