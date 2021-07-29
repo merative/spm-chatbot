@@ -1,0 +1,37 @@
+---
+title: Integrating with IBM® Cúram Social Program Management (SPM)
+description: Integrating with IBM® Cúram Social Program Management (SPM)
+---
+
+<InlineNotification>
+
+In order for Watson Assistant to be able to connect back to SPM to retrieve information about cases, clients or verifications, SPM must be deployed on a publicly accessible URL and not running behind a firewall.
+
+If SPM is deployed behind a firewall, or running in a development environment in Tomcat, the only information the virtual assistant will be able to return will be in relation to Caseworker Procedures.
+
+</InlineNotification>
+
+The following list outlines the steps you need to follow to integrate with SPM:
+
+1. [Configure the virtual assistant in SPM](https://www.ibm.com/docs/en/spm/8.0.0?topic=assistant-configuring-watson-settings).
+2. Set up a keystore and signer certificate for [JSON Web Token (JWT) authentication in SPM](https://www.ibm.com/docs/en/spm/8.0.0?topic=assistant-generating-jwt-keystore-certificates).
+3. [Add the public key certificate](https://www.ibm.com/docs/en/spm/8.0.0?topic=certificates-adding-public-key-watson-assistant) to your Watson Assistant instance.
+4. Configure your application server to support JWT:
+
++ **SPM deployed on IBM Websphere or Oracle Weblogic:**
+
+  If deploying SPM to a Websphere, Weblogic, or a Websphere Liberty standalone environment, the instructions can be found in the [IBM Documentation](https://www.ibm.com/docs/en/spm/8.0.0?topic=assistant-configuring-application-servers-json-web-tokens).
+  
++ **SPM on Kubernetes:**
+
+  The sample helm charts and files for SPM on Kubernetes contain the configurations for a keystore and self-signed certificate.
+  These are used for both signing and trusting a JWT, and for configuring the Liberty server to use OpenIDConnect to validate a JWT on an incoming request.
+  There are 2 properties in the configuration that need to be set. These are `apps.jwtConfig.issuerIdentifier` and `apps.jwtConfig.secretName`.
+  Further details about these properties are in the [SPM on Kubernetes guide](https://pages.github.ibm.com/wh-curamspm-devops/spm-kubernetes/deployment/config-reference/).
+  
++ **SPM running locally on Tomcat:**
+
+  Because the URL for accessing SPM is not publicly available when running locally, your IBM Cloud Functions will be unable to connect back to SPM to retrieve information to answer questions.
+  Therefore full functionality is unavailable if SPM is running locally on Tomcat.
+
+Now you are ready to deploy the sample skills to your Watson Assistant instance and get rocking!

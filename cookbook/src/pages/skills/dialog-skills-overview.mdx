@@ -1,0 +1,14 @@
+---
+title: About IBM Watson Assistant Dialog Skills
+description: About IBM Watson Assistant dialog skills
+---
+
+The natural-language processing for the IBM Watson Assistant service is defined in a *dialog skill*, which is a container for all of the artifacts that define a conversation flow.
+
+An *intent* is a purpose or goal that is expressed in a caseworker's input, such as answering a question on a particular topic. By recognizing the intent expressed in the input, the Watson Assistant service can choose the correct dialog for responding to it.
+
+The sample code provided contains a dialog skill which has been configured to recognise intents relating to outstanding verifications on a case or client or common caseworker procedures.
+A webhook has also been defined in the dialog skill which will trigger an IBM Cloud Functions action when a REST API call to SPM to retrieve data is required.
+
+See the [Architecture overview]() for more details on how IBM Watson Assistant integrates with IBM Cloud Functions and IBM Social Program Management.
+

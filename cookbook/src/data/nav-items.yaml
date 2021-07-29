@@ -10,6 +10,8 @@
       path: /quick-start/prerequisites/
     - title: Set up IBM Watson Assistant
       path: /quick-start/setup-wa/
+    - title: Integrate with SPM
+      path: /quick-start/setup-spm/
     - title: Github repo
       path: /quick-start/git-repo/
   hasDivider: true
@@ -22,14 +24,18 @@
     - title: Watson Assistant data storage
       path: /architecture/wa-data-storage
   hasDivider: true
-- title: IBM Cloud Function actions
+- title: IBM Cloud Functions actions
   pages:
+    - title: Overview
+      path: /functions/cloud-functions-overview 
     - title: Create an action
-      path: /functions/create-a-function 
+      path: /functions/create-action 
     - title: Edit an action
-      path: /functions/edit-a-function 
+      path: /functions/edit-action 
 - title: IBM Watson Assistant skills 
   pages:
+    - title: Overview
+      path: /skills/dialog-skills-overview 
     - title: Importing a dialog skill
       path: /skills/importing-a-skill
     - title: Customize your chat UI
