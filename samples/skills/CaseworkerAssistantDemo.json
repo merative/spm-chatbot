@@ -7387,13 +7387,6 @@
           "type": "synonyms",
           "value": "789",
           "synonyms": []
-        },
-        {
-          "type": "patterns",
-          "value": "caseReference",
-          "patterns": [
-            "([0-9]+)"
-          ]
         }
       ],
       "fuzzy_match": true
@@ -10139,7 +10132,7 @@
         "selector": "body",
         "dialog_node": "node_2_1624028924759"
       },
-      "conditions": "@type==\"Integrated Case\"",
+      "conditions": "@type==\"Integrated Case\" || @type==\"Case Ref\"",
       "dialog_node": "response_7_1626622133605",
       "previous_sibling": "response_2_1626601991698"
     },
