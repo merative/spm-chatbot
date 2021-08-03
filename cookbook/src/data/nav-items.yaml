@@ -3,7 +3,7 @@
     - path: /introduction
 - title: Virutal assistant overview
   pages:
-    - path: /virtual-assistant-in-spm/overview
+    - path: /overview
 - title: Quick start
   pages:
     - title: Prerequisites
@@ -53,10 +53,10 @@
   hasDivider: true
 - title: Virtual assistant user guide
   pages:
-    - path: /virtual-assistant-in-spm/virtual-assistant-user-guide
+    - path: /virtual-assistant-user-guide
 - title: Designing chatbots
   pages:
-    - path: /virtual-assistant-in-spm/designing-chatbots
+    - path: /designing-chatbots
   hasDivider: true
 - title: Feedback
   pages:
