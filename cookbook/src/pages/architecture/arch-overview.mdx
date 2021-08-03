@@ -3,14 +3,14 @@ title: Architecture overview
 description: Architecture overview
 --- 
 
-IBM® Cúram Social Program Management supports secure integration with the IBM Watson™ Assistant. If enabled, communication between Social Program Management and Watson™ is secured by using a JSON Web Token (JWT).
+IBM® Cúram Social Program Management supports secure integration with the IBM Watson™ Assistant. If enabled, communication between Social Program Management and Watson Assistant is secured by using a JSON Web Token (JWT).
 
-A chat widget, which can be configured to connect to an instance of WA, is included as an option in the caseworker application screens.
+A chat widget, which can be configured to connect to an instance of Watson Assistant, is included as an option in the caseworker application screens.
 
 A JWT is required for both outbound and inbound requests between Social Program Management and Watson Assistant.
 
 The Social Program Management application generates and signs a JWT for the logged in user, and adds it to each outbound request to Watson Assistant.
-This JWT is passed along to IBM Cloud Functions, and added to each inbound REST API request back into SPM. The application server will validate the JWT on incoming requests.
+This JWT is passed along to IBM Cloud Functions, and added to each inbound REST API request back into SPM. The application server will validate the JWT on incoming requests. Secure access using JWT is only applicable to internal users.
 
 Ant build scripts are provided in SPM to generate a keystore, a self-signed certificate and public key certificate file.
 These may be replaced with a certificate signed by a Trusted Authority in production environments.
@@ -22,7 +22,7 @@ The following figure outlines the flow of the integration with Social Program Ma
 
 ![watson-assistant-integration](../../images/watson-assistant-integration.png)
 
-<Caption>
+<Caption fullWidth>
 
 *Figure 1: Watson Assistant integration with IBM® Cúram Social Program Management.*
 
@@ -31,7 +31,7 @@ The following figure outlines the flow of the integration with Social Program Ma
 The following list outlines the illustrated steps:
 
 1. The web chat is embedded in SPM.
-2. The Watson Assistant properties are configured in SPM to point at a WA instance.
-3. The skills dialog node in WA calls a function in IBM Cloud Functions.
-4. The function in IBM Cloud Functions makes API calls to SPM to retrieve data.
+2. The Watson Assistant properties are configured in SPM to point at a Watson Assistant instance.
+3. The skills dialog node in Watson Assistant calls an action in IBM Cloud Functions.
+4. The action in IBM Cloud Functions makes API calls to SPM to retrieve data.
 5. Data from the response is returned in conversation in the web chat window.
