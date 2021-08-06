@@ -6,12 +6,33 @@ description: About IBM Cloud Functions
 IBM Cloud™ Functions is a Functions-as-a-Service (FaaS) platform, allowing for the connection and extension of cloud services.
 With IBM Cloud Functions, you can create stateless code snippets, called actions, that are set to perform one specific task.
 
-### How are IBM Cloud Functions actions used in the Virtual Assistant
+## How are IBM Cloud Functions actions used in the Virtual Assistant
 
 The sample IBM Watson Assistant dialog skill provided is configured  to trigger a webhook. A webhook is a HTTP POST request to a URL specified in the webhook definition.
 Because many of the APIs in SPM used to retrieve data are GET requests, an intermediate service that accepts a POST request is required. This is achieved using IBM Cloud Functions actions.
 
 The sample code provided contains a number of files to be used as IBM Cloud Functions actions.
-When invoked from IBM Watson Assistant, these actions will make a REST API call to SPM to retrieve the necessary data required to assist the caseworker.
+The Watson Assistant dialog skill can only be configured with one webhook, and so one top level Cloud Function action will be called for every request from Watson Assistant.
+This action then invokes further actions, depending on the request parameters from Watson Assistant, which in turn will make a REST API call to SPM to retrieve the necessary data required to assist the caseworker.
 
 See the [Architecture overview](/architecture/arch-overview) for more details on how IBM Cloud Functions integrates with IBM Watson Assistant and IBM Social Program Management.
+
+## Understanding the sample actions provided
+
+The sample Watson Assistant dialog skill webhook is configured to call to the URL of the `caseworker` action. This action then goes on to invoke further `person` and `verifications` actions.
+The `caseworker` action determines which of these underlying actions to invoke based on which input parameters are sent.
+
+There are different flows through the `person` and `verifications` actions. The flow is determined based on which input parameters are sent.
+The following tables list the different possible flows through the actions:
+
+| Person flows | Description | Input parameters to invoke the flow |
+| :-------------- |  :----------- | :----------- | 
+|1. Retrieve a person's details by using one of their identification numbers | Retrieves summary information about a person.| identificationID, identificationIDType |
+|2. Retrieve a case and primary client's details by using the case reference number | Retrieves summary information about a case and the person details of the case's primary client for the specified case.| caseReference |
+
+| Verifications flows | Description | Input parameters to invoke the flow |
+| :----------------------- | :-------------- | :----------- | 
+|1. Retrieve outstanding verification details for a person| Returns outstanding verifications that are linked directly to a person, and to all cases where the specified person is the primary client. | personID |
+|2. Retrieve outstanding verification details for a case | Returns outstanding verifications for the specified case.| caseID |
+
+

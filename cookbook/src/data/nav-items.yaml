@@ -48,15 +48,41 @@
   pages:
     - title: Displaying the chatbot in SPM
       path: /troubleshooting/web-chat-not-displaying
-    - title: Invoke a Cloud Function action
+    - title: Test a Cloud Function action
       path: /troubleshooting/invoke-a-function 
+    - title: Cloud Function actions issues
+      path: /troubleshooting/function-troubleshooting 
   hasDivider: true
 - title: Virtual assistant user guide
   pages:
-    - path: /virtual-assistant-user-guide
+    - title: Overview
+      path: /user-guide/overview
+    - title: Shortcuts
+      path: /user-guide/purpose
+    - title: Getting started
+      path: /user-guide/getting-started
+    - title: Search for verifications by case
+      path: /user-guide/case-verifications-search
+    - title: Search for verifications by client
+      path: /user-guide/client-verifications-search
+    - title: Search caseworker procedures
+      path: /user-guide/caseworker-procedures-search
 - title: Designing chatbots
   pages:
-    - path: /designing-chatbots
+    - title: Overview
+      path: /designing-chatbots/overview
+    - title: Purpose
+      path: /designing-chatbots/purpose
+    - title: Topic breadth
+      path: /designing-chatbots/topic-breadth
+    - title: Topic depth
+      path: /designing-chatbots/topic-depth
+    - title: Expression
+      path: /designing-chatbots/expression
+    - title: Building the chatbot
+      path: /designing-chatbots/building-the-chatbot
+    - title: Ensuring a great user experience
+      path: /designing-chatbots/user-experience
   hasDivider: true
 - title: Feedback
   pages:

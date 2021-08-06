@@ -1,0 +1,140 @@
+---
+title: Building the chatbot
+description: Building the chatbot.
+---
+
+The following list outlines the steps to define the interaction and conversation design of your chatbot:
+
+* Conversation architecture.
+* Dialog design.
+* Watson Assistant content.
+* Development reviews.
+
+You can use different tools to define the design of your chatbot. One way is to build a template in Mural. Mural is an online whiteboard that enables collaboration across the team. For more information, see Mural [(https://www.mural.co/)](https://www.mural.co/).
+
+By placing the Conversation architecture, Dialog design, and Watson Assistant content on the same Mural template, the team can iterate quickly and be constantly aligned on the latest design and implementation work.
+As the team builds the chatbot in Watson Assistant, you can also add a column to paste in product screen captures to enable testing and team reviews.
+
+![design-chatbot-design-mural](../../images/design-chatbot-design-mural.png)
+
+<Caption fullWidth>
+
+*Figure 1: The chatbot design Mural that contains the Conversation architecture, Dialog design, Development reviews, and Watson Assistant content.*
+
+</Caption>
+
+## Conversation architecture
+
+After you complete your topic depth and breadth exercises, you are ready to start constructing your conversation architecture.
+
+The conversation architecture contains labels and topics and describes the section’s content (intent), condition points, and jump to points. It also outlines the interaction between the human and the bot.
+
+![design-conversation-architecture-diagram](../../images/design-conversation-architecture-diagram.png)
+
+<Caption fullWidth>
+
+*Figure 2: Conversation architecture diagram - IBM Design for Artificial Intelligence, Sept 2019, Lawrence Humphrey.*
+
+</Caption>
+
+Add each high-level topic as a vertical node to the side of the architecture diagram, then place the subtopics horizontally. You then add the pathways and branching through this information, showing decision points and ‘jump to’ topics.
+
+The conversation architecture outlines the two-way interaction between the chatbot and human at a high level. Use two different colored post-its to illustrate this interaction, mapping out every step of the conversation.
+When you design your chatbot, there are conversation patterns that you need to consider.
+
+The following list outlines some of these:
+
+* Greetings: greeting text when the bot is started by the user.
+* Capabilities: outlines chatbot capabilities so that the user is clear about what the chatbot is designed to do.
+* Repair: if the bot does not understand a question or if the utterance is nonsense, the bot must recognize this and bring the conversation back to the conversation topic.
+* Hand off: if there is a human agent available, the chatbot needs to be able to recognize that the questions that user is asking are not in their skillset and that the user needs to be referred to a human agent.
+
+![design-conversation-architecture-topics-high-level-bot-human-interaction-flow](../../images/design-conversation-architecture-topics-high-level-bot-human-interaction-flow.png)
+
+<Caption fullWidth>
+
+*Figure 3: Conversation architecture with topics and high-level bot and human interaction flow.*
+
+</Caption>
+
+## Dialog design
+
+The chatbot must be capable of holding a natural, two-way conversation. Conversation is composed of topics, exchanges, and utterances.
+
+**Topics:** the high-level subject of the conversation, for example opening hours, store locations. Topics typically contain multiple exchanges.
+
+**Exchanges:** exchanges consist of two or more utterances and contain information that relates to the conversation topic. These exchanges take place between the bot and the user.
+
+**Utterances:** the building blocks for a conversation, utterances are the individual statements that make up the dialog.
+
+![design-design-for-artificial-intelligence](../../images/design-design-for-artificial-intelligence.png)
+
+<Caption fullWidth>
+
+*Figure 4: The IBM Design for Artificial Intelligence, Sept 2019, Lawrence Humphrey.*
+
+</Caption>
+
+When you design your bot, you are providing only one half of the conversation. The bot must provide relevant responses that sound natural and are believable.
+
+One aspect of building a natural conversation is to understand what your user might view as a preferred response.
+
+For example, if the user asks "What store locations are open near main street on Sunday?" the user expects that the chatbot provides a list of store locations near main street.
+
+To help you formulate the conversation, it might be helpful take each topic and role play the interaction between the bot and the user. Your bot needs to make sure that the user feels understood while also providing relevant information.
+
+Also, how are you portraying the bots personality? Is it consistent with the brand of your solution. Consider adding utterances that may reward or delight the user.
+
+The key to the success of the chatbot is the ability to be able to repair the conversation and keep the flow of dialog on topic.
+
+Users can get frustrated if they feel they are not being understood, so the chatbot needs to recognize this situation and steer the conversation to a successful outcome.
+
+### Defining the dialog
+
+Mural is used to define the dialog for the chatbot. Screen mock-ups that are drawn in Mural illustrate the dialog back and forth and enable you to test the conversation flows. As the screens are in Mural, they can be easily iterated on by any team member.
+
+The mock-ups are placed near their corresponding topic for ease of reference.
+
+Along with defining the utterances and exchanges, the screens also illustrate the guided flow that is provided by the chatbot, demonstrating the various pathways through the topics and content.
+
+![design-dialog-design-screen-mock-ups-in-mural](../../images/design-dialog-design-screen-mock-ups-in-mural.png)
+
+<Caption fullWidth>
+
+*Figure 5: Dialog design screen mock-ups in Mural.*
+
+</Caption>
+
+### Watson Assistant content
+
+Watson Assistant interprets the conversation by identifying the intents and entities that are outlined in the conversation.
+
+**Intent:** the action or purpose of the utterance. These are generally verbs. For example, in the question 'How do I add income evidence?', the intent is to add.
+
+**Entity:** the object that is mentioned in the utterance. For example, in 'How do I add income evidence?', the entity is income evidence.
+
+The breakdown of intents, entities, and dialog examples that are needed to program Watson Assistant are added to the Mural template.
+
+This content is linked to the node number on the Conversation architecture so the developer can see the overall flow and where it sits, and also the screens that it relates to.
+
+![design-watson-assistant-intents-entities-and-dialog-samples](../../images/design-watson-assistant-intents-entities-and-dialog-samples.png)
+
+<Caption fullWidth>
+
+*Figure 6: Watson Assistant intents, entities, and dialog samples.*
+
+</Caption>
+
+### Development reviews
+
+The chatbot design Mural is used to document, review, and sign off on the built chatbot. Screen captures from the build are placed near the screen mocks and reviewed by the team.
+
+This content can also be used for testing user scenarios to make sure that all conversation pathways work as expected.
+
+![design-screen-captures-of-implemented-chatbot-chatbot-design-mural](../images/design-screen-captures-of-implemented-chatbot-chatbot-design-mural.png)
+
+<Caption fullWidth>
+
+*Figure 7: Screen captures of implemented chatbot – chatbot design mural.*
+
+</Caption>
