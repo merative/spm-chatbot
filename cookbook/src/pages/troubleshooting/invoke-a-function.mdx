@@ -6,7 +6,8 @@ description: How to test an action directly by using the IBM Cloud Functions ser
 You might want to modify the existing sample Javascript code that is provided to call your own custom REST APIs or display different fields in the chatbot based on your own requirements.
 You will then want to test that your action works as expected.
 
-As part of the IBM Cloud Functions service, you can directly invoke each of the actions you created and view the expected JSON or HTML format that is returned from each request. Although the steps outlined on this page detail how to test one of the sample actions provided, the same concepts can be used to test your own Cloud Functions actions.
+As part of the IBM Cloud Functions service, you can directly invoke each of the actions you created and view the expected JSON or HTML format that is returned from each request.
+Although the steps outlined on this page detail how to test one of the sample actions provided, the same concepts can be used to test your own Cloud Functions actions.
 
 ## Testing the sample actions
 
@@ -26,7 +27,7 @@ You can test the `caseworker` action, which will in turn invoke one of the `pers
 ### How to generate an authorization token to use when invoking the action
 
 Before you invoke any of the actions, you need to get a valid JWT to add as an authorization parameter.
-This is required for the action to be able to access the underlying REST API in the SPM server. 
+This is required for the action to be able to access the underlying REST API in the SPM server.
 
 The following list outlines how to retrieve a valid JWT from SPM to use when invoking the actions:
 
@@ -35,13 +36,13 @@ The following list outlines how to retrieve a valid JWT from SPM to use when inv
 3. Open the `Virtual Assistant` web chat and select `Outstanding verifications by case`.
 4. By viewing the request headers in the `Network` section for the request to Watson Assistant, you can copy the value for the `authorization` request header. You do not need to include the 'Bearer' scheme, just the value of the token.
 
-    ![Authorization](../../images/authorization.png)
+![Authorization](../../images/authorization.png)
 
-    <Caption fullWidth>
+<Caption fullWidth>
 
-    *Figure 1: Authorization.*
+*Figure 1: Authorization.*
 
-    </Caption>
+</Caption>
 
 ### Determine parameters for the flow you want to test and add to a JSON object
 
@@ -49,10 +50,11 @@ The Cloud Function action accepts parameters as a JSON object only. Determine th
 
 #### Parameters and flows for the `caseworker` action
 
-The following table lists the possible flows through the `caseworker` action that you can test and the parameters required to invoke the flow. In addition, a ```__ow_headers``` parameter containing a nested JSON object with a valid authorization token value (without the 'Bearer' scheme) is required. 
+The following table lists the possible flows through the `caseworker` action that you can test and the parameters required to invoke the flow.
+In addition, a ```__ow_headers``` parameter containing a nested JSON object with a valid authorization token value (without the 'Bearer' scheme) is required.
 
 | Flow | Parameters to invoke the flow | Parameter details | Example of parameters in JSON format |
-| :-------------- | :------ |  :----------- | :----------- | 
+| :-------------- | :------ |  :----------- | :----------- |
 |1. Retrieve a person's details by using one of their identifiers | identificationID<br/>identificationIDType | You can retrieve the `identificationID`, which is also known as the `alternateID`, from a person's evidence page in SPM. <br/><br/> The `identificationIDType` parameter is an optional string parameter. Based on the sample code, the value must be one of `passport`, `drivers licence` or `SSN`. Under the hood, the string gets mapped to a corresponding code from the ConcernRoleAlternateID codetable in SPM, which is required by the underlying REST API that the action invokes. Any other string value will get mapped to a default code of `CA7`. If this parameter is not used, the default code of `CA7` will be used. | ```{"identificationID":20001, "identificationIDType":"Passport", "__ow_headers":{"authorization":"<token_value>"}}```|
 |2. Retrieve a case and primary client's details by using the case reference number | caseReference | You can retrieve the case reference number when you view the Integrated Case in SPM.| ```{"personID" : "564543246789865439", "__ow_headers":{"authorization":"<token_value>"}}```|
 |3. Retrieve verification details for a person| personID | You can retrieve the `personID`, which is also known as the `concernRoleID`, from the person home page in SPM if you have the SPM UI Inspector tool configured, or from the `ConcernRole` database table.| ```{"caseReference" : "55555", "__ow_headers":{"authorization":"<token_value>"}}```|
@@ -60,19 +62,21 @@ The following table lists the possible flows through the `caseworker` action tha
 
 #### Parameters and flows for the `person` action
 
-The following table lists the flows through the `person` action that you can test and the parameters required to invoke the flow. A valid ```authorization``` parameter is required in each action. Note that the format of this parameter differs slightly from the `caseworker` action.
+The following table lists the flows through the `person` action that you can test and the parameters required to invoke the flow. A valid ```authorization``` parameter is required in each action.
+Note that the format of this parameter differs slightly from the `caseworker` action.
 
 | Flow | Parameters to invoke the flow | Parameter details | Example of parameters in JSON format |
-| :-------------- | :------ |  :----------- | :----------- | 
+| :-------------- | :------ |  :----------- | :----------- |
 |1. Retrieve a person's details by using one of their identifiers | identificationID<br/>identificationIDType |You can retrieve the `identificationID`, which is also known as the `alternateID`, from a person's evidence page in SPM. <br/><br/> The `identificationIDType` parameter is an optional string parameter. Based on the sample code, the value must be one of `passport`, `drivers licence` or `SSN`. Under the hood, the string gets mapped to a corresponding code from the ConcernRoleAlternateID codetable in SPM, which is required by the underlying REST API that the action invokes. Any other string value will get mapped to a default code of `CA7`. If this parameter is not used, the default code of `CA7` will be used. | ```{"identificationID":20001, "identificationIDType":"Passport", "authorization":"Bearer <token_value>"}```|
 |2. Retrieve a case and primary client's details by using the case reference number | caseReference | You can retrieve the case reference number when you view the Integrated Case in SPM.| ```{"personID" : "564543246789865439", "authorization":"Bearer <token_value>"}```|
 
 #### Parameters and flows for the `verifications` action
 
-The following table lists the flows through the `verifications` action that you can test and the parameters required to invoke the flow. A valid ```authorization``` parameter is required in each action. Note that the format of this parameter differs slightly from the `caseworker` action.
+The following table lists the flows through the `verifications` action that you can test and the parameters required to invoke the flow. A valid ```authorization``` parameter is required in each action.
+Note that the format of this parameter differs slightly from the `caseworker` action.
 
 | Flow | Parameters to invoke the flow | Parameter details | Example of parameters in JSON format |
-| :-------------- | :------ |  :----------- | :----------- | 
+| :-------------- | :------ |  :----------- | :----------- |
 |1. Retrieve verification details for a person| personID | You can retrieve the `personID`, which is also known as the `concernRoleID`, from the person home page in SPM if you have the SPM UI Inspector tool configured, or from the `ConcernRole` database table.| ```{"caseReference" : "55555", ""authorization":"Bearer <token_value>"}```|
 |2. Retrieve verification details for a case | caseID | You can retrieve the `caseID` from the case home page if you have the SPM UI tool configured, or from the `CaseHeader` database table.| ```{"caseID" : "8362543246789865439", "authorization":"Bearer <token_value>"}```|
 
@@ -89,7 +93,6 @@ The following table lists the flows through the `verifications` action that you 
 *Figure 2: Invoke with parameters.*
 
 </Caption>
-
 4. Click the `Invoke` button.
 
 ## Sample expected results

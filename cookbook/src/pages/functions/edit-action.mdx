@@ -53,11 +53,9 @@ The following steps outline how to edit the person and verifications actions:
 
 If you want to customize one of the sample actions, or add your own action, you may need to take the following information into account:
 
-- The `caseworker` action is the entry point into the actions, and is what gets invoked from Watson Assistant. It determines which other underlying actions to call. 
+- The `caseworker` action is the entry point into the actions, and is what gets invoked from Watson Assistant. It determines which other underlying actions to call.
 If you add a new lower level action, you will need to update the `caseworker` action to call your new action and pass along any required parameters.
-- If you create a new action which calls to a REST API in SPM, you will need to ensure you add the authorization and referer headers to the API request. 
+- If you create a new action which calls to a REST API in SPM, you will need to ensure you add the authorization and referer headers to the API request.
 Details of how to retrieve the value for the authorization header from the webhook and pass along through the actions and to the REST API may be copied from the sample code. The referer header should be set to a value of `curam://<name>`.
 - The sample code does not send an accept-language header when calling the REST API in SPM, and so the default fallback of `en` will be used by the API.
 If you require the REST API to return attributes that contain localizable text in another language or locale, you can update the sample code to add an accept-langauge header to the API request.
-
-

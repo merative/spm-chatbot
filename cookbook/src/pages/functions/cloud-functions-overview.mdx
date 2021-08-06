@@ -20,19 +20,17 @@ See the [Architecture overview](/architecture/arch-overview) for more details on
 ## Understanding the sample actions provided
 
 The sample Watson Assistant dialog skill webhook is configured to call to the URL of the `caseworker` action. This action then goes on to invoke further `person` and `verifications` actions.
-The `caseworker` action determines which of these underlying actions to invoke based on which input parameters are sent.
+The `caseworker` action determines which of these underlying actions to invoke based on which input parameters are sent from Watson Assistant.
 
 There are different flows through the `person` and `verifications` actions. The flow is determined based on which input parameters are sent.
 The following tables list the different possible flows through the actions:
 
 | Person flows | Description | Input parameters to invoke the flow |
-| :-------------- |  :----------- | :----------- | 
+| :-------------- |  :----------- | :----------- |
 |1. Retrieve a person's details by using one of their identification numbers | Retrieves summary information about a person.| identificationID, identificationIDType |
 |2. Retrieve a case and primary client's details by using the case reference number | Retrieves summary information about a case and the person details of the case's primary client for the specified case.| caseReference |
 
 | Verifications flows | Description | Input parameters to invoke the flow |
-| :----------------------- | :-------------- | :----------- | 
+| :----------------------- | :-------------- | :----------- |
 |1. Retrieve outstanding verification details for a person| Returns outstanding verifications that are linked directly to a person, and to all cases where the specified person is the primary client. | personID |
 |2. Retrieve outstanding verification details for a case | Returns outstanding verifications for the specified case.| caseID |
-
-

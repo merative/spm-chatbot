@@ -28,7 +28,7 @@ The following section details how to create a link in the Virtual Assistant that
    * The full context pattern `<?context['<context variable name>']?>` is used for text variables or the short place holder format where the attribute is preceded by the dollar character `$`.
    For example `$<context variable name>` is used to hold an attribute value. The attributes are then inserted in to the user defined property values at run time.
 
-```
+  ```
 		 {
 			"output": {
 			    "generic": [
@@ -52,11 +52,11 @@ The following section details how to create a link in the Virtual Assistant that
 			    "preferredTabList": "PersonHome"
 			}
 		 }
-```
+  ```
 
 * Open the calling dialog node and select 'Jump to' from the dropdown in the `Then assistant should` section. Select the node `#SPL_See_The_Case_Notes_Link` created above to jump to.
 
-Test the link in the running application and validate the link opens the correct page in the application.
+* Test the link in the running application and validate the link opens the correct page in the application.
 
 Alternatively the links can be added to the JSON Editor response body or returned as a parameter from a Cloud Function action.
 The parameter values to create the links can be user input, values returned from a Cloud Function action or values defined as context variables set in other dialog nodes.

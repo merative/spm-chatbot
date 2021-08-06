@@ -58,13 +58,13 @@
     - title: Overview
       path: /user-guide/overview
     - title: Shortcuts
-      path: /user-guide/purpose
+      path: /user-guide/shortcuts
     - title: Getting started
       path: /user-guide/getting-started
     - title: Search for verifications by case
-      path: /user-guide/case-verifications-search
+      path: /user-guide/case-verification-search
     - title: Search for verifications by client
-      path: /user-guide/client-verifications-search
+      path: /user-guide/client-verification-search
     - title: Search caseworker procedures
       path: /user-guide/caseworker-procedures-search
 - title: Designing chatbots
