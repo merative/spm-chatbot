@@ -1,0 +1,70 @@
+---
+title: Troubleshooting tips for IBM Cloud Functions actions
+description: Troubleshooting tips for IBM Cloud Functions actions
+---
+
+## No parameter entered
+
+The following results are received if you do not add any parameters as part of the `Invoke with parameter` button and just click `Invoke`:
+
+```
+Results:
+{
+  "error": "An error has occurred: TypeError: Cannot read property 'authorization' of undefined"
+}
+```
+
+![Invoke-CF-No-parameter](../../images/Invoke-CF-No-parameter.png)
+
+<Caption fullWidth>
+
+*Figure 7: No parameter entered.*
+
+</Caption>
+
+Use the sample parameters provided in [Invoke flows](#invoke-flows).
+
+## Authorization issue
+
+The following results are received if you omitted steps 5 and 6 in the [Invoke the Functions](#invoke-the-functions).
+
+```
+Results:
+{
+  "error": "An error has occurred: TypeError: Cannot read property 'authorization' of undefined"
+}
+```
+
+![Invoke-CF-authorization-not-set](../../images/Invoke-CF-authorization-not-set.png)
+
+<Caption fullWidth>
+
+*Figure 8: Authorization issue.*
+
+</Caption>
+
+## Authorization expired
+
+The following results are received when the authorization is expired.
+
+```
+Results: 
+      "error": 401,
+      "error_description": "OpenID Connect client returned with status: SEND_401"
+```
+
+![Invoke-CF-authorization-expires](../../images/Invoke-CF-authorization-expires.png)
+
+<Caption fullWidth>
+
+*Figure 9: Authorization expired.*
+
+</Caption>
+
+You need to perform an action in the web chat window and copy the new authorization bearer token from the header request.
+
+## Unable to view end of the logs
+
+To view all the logs outputted, the scroll appears to scroll between the transactions and does not allow you to view the end of the logs outputted for the individual transactions.
+
+To view all the logs, highlight the end of the logs that are shown and press SHIFT + Down Arrow. You can now scroll down by using the keyboard to view all the logs that are outputted for that transaction.

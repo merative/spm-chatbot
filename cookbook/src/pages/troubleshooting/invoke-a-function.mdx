@@ -1,122 +1,103 @@
 ---
-title: Start an action in IBM Cloud Functions
-description: How to start an action directly by using the IBM Cloud Functions service
+title: Test an action directly in IBM Cloud Functions
+description: How to test an action directly by using the IBM Cloud Functions service
 ---
 
-<u>Table of Contents</u>
+You might want to modify the existing sample Javascript code that is provided to call your own custom REST APIs or display different fields in the chatbot based on your own requirements.
+You will then want to test that your action works as expected.
 
-* [Start the action](#start-the-actions)
-  * [Start flows](#start-flows)
-    * [Start with parameters](#start-with-parameters)
-  * [Start Person or verifications actions](#start-person-or-verifications-actions)
-* [Sample expected results](#sample-expected-results)
-* [Troubleshooting issues](#Troubleshooting-issues)
-  * [No parameter entered](#no-parameter-entered)
-  * [Authorization issue](#authorization-issue)
-  * [Authorization expired](#authorization-expired)
-  * [Not able to view end of the logs](#not-able-to-view-end-of-the-logs)
+As part of the IBM Cloud Functions service, you can directly invoke each of the actions you created and view the expected JSON or HTML format that is returned from each request.
+Although the steps outlined on this page detail how to test one of the sample actions provided, the same concepts can be used to test your own Cloud Functions actions.
 
-## Start the Actions
+## Testing the sample actions
 
-As part of the IBM Cloud Functions service, you can run each of the actions that are created to view the expected JSON or HTML format that is outputted as part of each request.
+Further details about the sample actions provided can be found in the [Cloud Function overview](/functions/cloud-functions-overview) section.
 
-You might want to modify the existing sample Java script code that is provided to call your own custom REST APIs or display different fields in the chatbot based on your own requirements.
+The following list summarizes the steps to test an action using the IBM Cloud Functions service:
 
-Before you start the `caseworker` IBM Cloud Functions action, you need to update the authorization to include a valid bearer token where you can retrieve from the server.
+- Generate a JWT in SPM and copy the value for use as an authorization parameter when invoking the action.
+- Retrieve values for the other parameters you want to send. Different flows will be invoked depending on the parameters used.
+- In the IBM Cloud Functions service, add all parameters to a JSON object.
+- Invoke the action and view the response.
 
-The following list outlines how to update the authorization to include a valid bearer token where you can retrieve from the server:
+Further details for each of these steps are in the following sections.
 
-1. From your server, log in with the user that you enabled to be displayed as the virtual assistant for example, `caseworker`.
+You can test the `caseworker` action, which will in turn invoke one of the `person` or `verifications` actions under the hood, or you can test either of the `person` or `verifications` actions directly.
+
+### How to generate an authorization token to use when invoking the action
+
+Before you invoke any of the actions, you need to get a valid JWT to add as an authorization parameter.
+This is required for the action to be able to access the underlying REST API in the SPM server.
+
+The following list outlines how to retrieve a valid JWT from SPM to use when invoking the actions:
+
+1. In your SPM application, log in with the user that you enabled to be displayed as the virtual assistant for example, `caseworker`.
 2. From your browser > `Developer Tools`, open the `Network` section and select the clear icon.
 3. Open the `Virtual Assistant` web chat and select `Outstanding verifications by case`.
-4. From the Request Header on the request, you can copy the value for the `authorization`.
+4. By viewing the request headers in the `Network` section for the request to Watson Assistant, you can copy the value for the `authorization` request header. You do not need to include the 'Bearer' scheme, just the value of the token.
 
-    ![Authorization](../../images/authorization.png)
+![Authorization](../../images/authorization.png)
 
-    <Caption fullWidth>
+<Caption fullWidth>
 
-    *Figure 1: Authorization.*
+*Figure 1: Authorization.*
 
-    </Caption>
+</Caption>
 
-5. From the `caseworker` action javascript code, comment out the following line:
+### Determine parameters for the flow you want to test and add to a JSON object
 
-    ```shell
-    //const authorization = 'Bearer ' + params.__ow_headers.authorization;`. 
-    ```
+The Cloud Function action accepts parameters as a JSON object only. Determine the parameters you need to test the required action and flow. Add them, along with the appropriate authorization parameter, to a JSON object.
 
-    The authorization is passed through as part of the webhook header configurations.
+#### Parameters and flows for the `caseworker` action
 
-6. You need to put the line back in when you are testing directly with the application.
+The following table lists the possible flows through the `caseworker` action that you can test and the parameters required to invoke the flow.
+In addition, a ```__ow_headers``` parameter containing a nested JSON object with a valid authorization token value (without the 'Bearer' scheme) is required.
 
-7. Remove the line that you add as part of step 6.
+| Flow | Parameters to invoke the flow | Parameter details | Example of parameters in JSON format |
+| :-------------- | :------ |  :----------- | :----------- |
+|1. Retrieve a person's details by using one of their identifiers | identificationID<br/>identificationIDType | You can retrieve the `identificationID`, which is also known as the `alternateID`, from a person's evidence page in SPM. <br/><br/> The `identificationIDType` parameter is an optional string parameter. Based on the sample code, the value must be one of `passport`, `drivers licence` or `SSN`. Under the hood, the string gets mapped to a corresponding code from the ConcernRoleAlternateID codetable in SPM, which is required by the underlying REST API that the action invokes. Any other string value will get mapped to a default code of `CA7`. If this parameter is not used, the default code of `CA7` will be used. | ```{"identificationID":20001, "identificationIDType":"Passport", "__ow_headers":{"authorization":"<token_value>"}}```|
+|2. Retrieve a case and primary client's details by using the case reference number | caseReference | You can retrieve the case reference number when you view the Integrated Case in SPM.| ```{"personID" : "564543246789865439", "__ow_headers":{"authorization":"<token_value>"}}```|
+|3. Retrieve verification details for a person| personID | You can retrieve the `personID`, which is also known as the `concernRoleID`, from the person home page in SPM if you have the SPM UI Inspector tool configured, or from the `ConcernRole` database table.| ```{"caseReference" : "55555", "__ow_headers":{"authorization":"<token_value>"}}```|
+|4. Retrieve verification details for a case | caseID | You can retrieve the `caseID` from the case home page if you have the SPM UI Inspector tool configured, or from the `CaseHeader` database table.| ```{"caseID" : "8362543246789865439", "__ow_headers":{"authorization":"<token_value>"}}```|
 
-8. Create a new const and paste the bearer token value from the server. For example:
+#### Parameters and flows for the `person` action
 
-    ```
-    const authorization = 'Bearer eyJ0eXAi...';
-    ```
+The following table lists the flows through the `person` action that you can test and the parameters required to invoke the flow. A valid ```authorization``` parameter is required in each action.
+Note that the format of this parameter differs slightly from the `caseworker` action.
 
-### Start flows
+| Flow | Parameters to invoke the flow | Parameter details | Example of parameters in JSON format |
+| :-------------- | :------ |  :----------- | :----------- |
+|1. Retrieve a person's details by using one of their identifiers | identificationID<br/>identificationIDType |You can retrieve the `identificationID`, which is also known as the `alternateID`, from a person's evidence page in SPM. <br/><br/> The `identificationIDType` parameter is an optional string parameter. Based on the sample code, the value must be one of `passport`, `drivers licence` or `SSN`. Under the hood, the string gets mapped to a corresponding code from the ConcernRoleAlternateID codetable in SPM, which is required by the underlying REST API that the action invokes. Any other string value will get mapped to a default code of `CA7`. If this parameter is not used, the default code of `CA7` will be used. | ```{"identificationID":20001, "identificationIDType":"Passport", "authorization":"Bearer <token_value>"}```|
+|2. Retrieve a case and primary client's details by using the case reference number | caseReference | You can retrieve the case reference number when you view the Integrated Case in SPM.| ```{"personID" : "564543246789865439", "authorization":"Bearer <token_value>"}```|
 
-The `caseworker` action is the main action that calls into the `person` and `verifications` actions to retrieve the required data to be sent back to be displayed in the web chat window.
+#### Parameters and flows for the `verifications` action
 
-There are currently four different flows available in the sample actions that call out to the external system to retrieve the information.
+The following table lists the flows through the `verifications` action that you can test and the parameters required to invoke the flow. A valid ```authorization``` parameter is required in each action.
+Note that the format of this parameter differs slightly from the `caseworker` action.
 
-The four flows can be started directly by using the `caseworker` action or else you can use the `person` or `verification` actions to run the individual flows.
+| Flow | Parameters to invoke the flow | Parameter details | Example of parameters in JSON format |
+| :-------------- | :------ |  :----------- | :----------- |
+|1. Retrieve verification details for a person| personID | You can retrieve the `personID`, which is also known as the `concernRoleID`, from the person home page in SPM if you have the SPM UI Inspector tool configured, or from the `ConcernRole` database table.| ```{"caseReference" : "55555", ""authorization":"Bearer <token_value>"}```|
+|2. Retrieve verification details for a case | caseID | You can retrieve the `caseID` from the case home page if you have the SPM UI tool configured, or from the `CaseHeader` database table.| ```{"caseID" : "8362543246789865439", "authorization":"Bearer <token_value>"}```|
 
-The following steps outline how to start the four flows:
+## Invoke the Cloud Function action with parameters
 
-1. From `Functions` > `Actions` > `curam-rest` package, select the  `caseworker` function.
-2. From the `Code` left navigation section of the page, select `Invoke with parameters` and enter one of the following parameters depending on the flow that you want to test out and click `Save`.
-
-The following table lists the four different flows available in the sample actions:
-
-| Flow | Start with parameters | Description |
-| :-------------- | :------ |:------ |
-| Retrieve Person details  | ```{"identificationID" : "<identificationID>"}``` | You can retrieve the `identificationID` which is also known as the `alternateID` from the Persons evidence page. The default identification type code is set to `CA7`, which is a `Reference Number`. If you want to test out other identification types by starting through the function, you will need to update the `Invoke with parameters` to include the type for example, by using the SSN identification type ```{"identificationID" : "<identificationID>", "identificationIDTypeCode": "CA1"}```.  
-| Retrieve Person verification details | ```{"personID" : "<personID>"}``` | You can retrieve the personID, which is also known as the `concernRoleID` from the person home page if you have the [7. SPM UI Inspector](#7-spm-ui-inspector) tool configured. |
-| Retrieve Person details for a case | ```{"caseReference" : "<caseReference>"}``` | You can view the case reference number when you selected the Integrated Case that is created in the system. |
-| Retrieve case verification details  | ```{"caseID" : "<caseID>"}``` | You can retrieve the caseID from the case home page if you have the [7. SPM UI Inspector](#7-spm-ui-inspector) tool configured.  |
-
-#### Start with parameters
-
-The following steps outline how to start with parameters:
-
-1. Click the `Invoke with parameters` button.
-2. From the `Change Action Input` window, enter one of the sample parameters and click `Apply`.
+1. From `Functions` > `Actions` > `curam-rest` package, select the action to be tested.
+2. Click the `Invoke with parameters` button.
+3. From the `Change Action Input` window, enter a JSON object containing the parameters you want to send and click `Apply`.
 
 ![Invoke-with-parameters](../../images/Invoke-with-parameters.png)
 
 <Caption fullWidth>
 
-*Figure 2: Start with parameters.*
+*Figure 2: Invoke with parameters.*
 
 </Caption>
-
-### Start person or verifications actions
-
-To troubleshoot, run the `person` or `verifications` flows directly to add more `console.log()` outputs to troubleshoot if things are not working as you expected.
-
-You need to update the `Invoke with parameters` to also include the `authorization` parameter to include the bearer token that is retrieved from the header request that is specified in [Invoke the Functions](#invoke-the-functions).
-
-The following table lists the two flows for the `person` function that you can test.
-
-| Person flows | Start with parameters |
-| :-------------- | :------ |
-|1. Retrieving the person details by using the identification identifier.| ```{"identificationID" : "<identificationID>, "authorization": "Bearer xyz..."}```
-|2. Retrieving the person details by using the case reference number.| ```{"caseReference" : "<caseReference>","authorization": "Bearer xyz..."}```|
-
-The following table lists the two flows for the `verifications` function that you can test.
-
-| Verifications flows | Start with parameters |
-| :-------------- | :------ |
-|1. Retrieving the person verification details by using the person identifier.| ```{"personID" : "<personID>, "authorization": "Bearer xyz..."}```
-|2. Retrieving the case verification details by using the case identifier.| ```{"caseID" : "<caseID>","authorization": "Bearer xyz..."}```|
+4. Click the `Invoke` button.
 
 ## Sample expected results
 
-The following figures include some sample results retrieved by starting the different flows based on sample data that is configured in the application.
+The following figures include some sample results retrieved by invoking the different actions based on sample data that is configured in the application.
 
 ![Person-results-by-identification-id](../../images/Person-results-by-identification-id.png)
 
@@ -149,71 +130,3 @@ The following figures include some sample results retrieved by starting the diff
 *Figure 6: Verification results by using the case number.*
 
 </Caption>
-
-## Troubleshooting issues
-
-### No parameter entered
-
-The following results are received if you do not add any parameters as part of the `Invoke with parameter` button and just click `Invoke`:
-
-```
-Results:
-{
-  "error": "An error has occurred: TypeError: Cannot read property 'authorization' of undefined"
-}
-```
-
-![Invoke-CF-No-parameter](../../images/Invoke-CF-No-parameter.png)
-
-<Caption fullWidth>
-
-*Figure 7: No parameter entered.*
-
-</Caption>
-
-Use the sample parameters provided in [Invoke flows](#invoke-flows).
-
-### Authorization issue
-
-The following results are received if you omitted steps 5 and 6 in the [Invoke the Functions](#invoke-the-functions).
-
-```
-Results:
-{
-  "error": "An error has occurred: TypeError: Cannot read property 'authorization' of undefined"
-}
-```
-
-![Invoke-CF-authorization-not-set](../../images/Invoke-CF-authorization-not-set.png)
-
-<Caption fullWidth>
-
-*Figure 8: Authorization issue.*
-
-</Caption>
-
-### Authorization expired
-
-The following results are received when the authorization is expired.
-
-```
-Results: 
-      "error": 401,
-      "error_description": "OpenID Connect client returned with status: SEND_401"
-```
-
-![Invoke-CF-authorization-expires](../../images/Invoke-CF-authorization-expires.png)
-
-<Caption fullWidth>
-
-*Figure 9: Authorization expired.*
-
-</Caption>
-
-You need to perform an action in the web chat window and copy the new authorization bearer token from the header request.
-
-### Unable to view end of the logs
-
-To view all the logs outputted, the scroll appears to scroll between the transactions and does not allow you to view the end of the logs outputted for the individual transactions.
-
-To view all the logs, highlight the end of the logs that are shown and press SHIFT + Down Arrow. You can now scroll down by using the keyboard to view all the logs that are outputted for that transaction.
