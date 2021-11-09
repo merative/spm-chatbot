@@ -1,9 +1,12 @@
 - title: Introduction
   pages:
     - path: /introduction
-- title: Virutal assistant overview
+- title: Virtual caseworker assistant overview
   pages:
-    - path: /overview
+    - path: /overview-cw
+- title: Virtual citizen assistant overview
+  pages:
+    - path: /overview-ce
 - title: Quick start
   pages:
     - title: Prerequisites
@@ -38,6 +41,8 @@
       path: /skills/dialog-skills-overview 
     - title: Importing a dialog skill
       path: /skills/importing-a-skill
+    - title: Embed your chat UI
+      path: /skills/embed-chat-ui
     - title: Customize your chat UI
       path: /skills/web-chat-ui
     - title: Configuring a webhook
