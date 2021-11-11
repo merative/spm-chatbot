@@ -1572,7 +1572,7 @@
       "parent": "slot_5_1634325424019",
       "context": {
         "mapQuery": "Department+Social+Services",
-        "mapApiKey": "AIzaSyB21KMA8mssSzzBJQ--s0fwEvrvf8KvKEg"
+        "mapApiKey": "<Your API Key>"
       },
       "event_name": "focus",
       "dialog_node": "handler_10_1634325424036",
