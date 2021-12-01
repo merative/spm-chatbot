@@ -1530,7 +1530,7 @@
                 "text": ""
               },
               {
-                "text": "I do understand questions about programs and services offered, application processing and timelines, and other frequently asked questions."
+                "text": "I do understand questions about creating an account, submitting an application, your benefits and payments and other frequently asked questions. "
               },
               {
                 "text": ""
@@ -1572,7 +1572,7 @@
       "parent": "slot_5_1634325424019",
       "context": {
         "mapQuery": "Department+Social+Services",
-        "mapApiKey": "<Your API Key>"
+        "mapApiKey": "AIzaSyB21KMA8mssSzzBJQ--s0fwEvrvf8KvKEg"
       },
       "event_name": "focus",
       "dialog_node": "handler_10_1634325424036",
@@ -1689,7 +1689,7 @@
           {
             "values": [
               {
-                "text": "There are various reasons this could be the case. Make sure you are following the upload process correctly. Also, documents submitted through this service are subject to review and will not be included if they appear to contain a virus or malware. It is your responsibility to make sure documents were submitted with your application."
+                "text": "There are various reasons you could have upload issues. Make sure you are following the upload process correctly. Also, documents submitted through this service are subject to review and will not be included if they appear to contain a virus or malware. It is your responsibility to make sure documents were submitted with your application."
               }
             ],
             "response_type": "text",
@@ -2000,7 +2000,7 @@
                 "text": "If you need anything else let me know."
               },
               {
-                "text": "talk soon!"
+                "text": "Talk soon!"
               }
             ],
             "response_type": "text",
@@ -2228,7 +2228,7 @@
                 "text": ""
               },
               {
-                "text": "You can ask questions about programs and services offered, eligibility, account-related questions, and other frequently asked questions.   You can also find an office closest to you to get more personalized help.  "
+                "text": "You can ask questions about creating an account, submitting an application, your benefits and payments and other frequently asked questions. You can also find an office closest to you to get more personalized help."
               },
               {
                 "text": ""
@@ -2313,7 +2313,7 @@
                 "text": ""
               },
               {
-                "text": "Note that a caseworker will need to link your account to your application in order to access more robust features such Payments, Notices, Change of Circumstances, and more.    Click <a href=\"https://cdss.ca.gov\" target=\"_blank\">here</a> to learn more about your account."
+                "text": "Note that a caseworker will need to link your account to your application in order to access more robust features such as Payments, Notices, Change of Circumstances, and more.    Click <a href=\"https://cdss.ca.gov\" target=\"_blank\">here</a> to learn more about your account."
               }
             ],
             "response_type": "text",
@@ -2885,7 +2885,7 @@
                 "text": "Hi! I’m your virtual assistant. What can I help you with today?"
               },
               {
-                "text": "You can ask questions about programs and services offered, application processing and timelines, and other frequently asked questions."
+                "text": "You can ask questions about creating an account, submitting an application, your benefits and payments and other frequently asked questions. "
               },
               {
                 "text": ""
