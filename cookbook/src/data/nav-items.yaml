@@ -1,9 +1,9 @@
 - title: Introduction
   pages:
     - path: /introduction
-- title: Virutal assistant overview
+- title: Virtual caseworker assistant overview
   pages:
-    - path: /overview
+    - path: /overview-cw
 - title: Quick start
   pages:
     - title: Prerequisites
@@ -83,6 +83,19 @@
       path: /designing-chatbots/building-the-chatbot
     - title: Ensuring a great user experience
       path: /designing-chatbots/user-experience
+  hasDivider: true
+- title: Virtual citizen assistant
+  pages:
+    - title: Overview
+      path: /ce/overview
+    - title: Prerequisites
+      path: /ce/prerequisites/
+    - title: Importing a dialog skill
+      path: /ce/importing-a-skill
+    - title: Embed your chat UI
+      path: /ce/embed-chat-ui
+    - title: Integrate Maps
+      path: /ce/integrate-maps
   hasDivider: true
 - title: Feedback
   pages:

@@ -1,0 +1,2970 @@
+{
+  "intents": [
+    {
+      "intent": "Cancel",
+      "examples": [
+        {
+          "text": "cancel that"
+        },
+        {
+          "text": "cancel the request"
+        },
+        {
+          "text": "forget it"
+        },
+        {
+          "text": "i changed my mind"
+        },
+        {
+          "text": "i don't want a table anymore anymore"
+        },
+        {
+          "text": "never mind"
+        },
+        {
+          "text": "nevermind"
+        }
+      ]
+    },
+    {
+      "intent": "General_Greetings",
+      "examples": [
+        {
+          "text": "Good day"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Good to see you"
+        },
+        {
+          "text": "Greetings"
+        },
+        {
+          "text": "Have you been well?"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hello Agent"
+        },
+        {
+          "text": "Hello I am looking for some help here"
+        },
+        {
+          "text": "Hey how are you doing"
+        },
+        {
+          "text": "Hey there"
+        },
+        {
+          "text": "Hey there all"
+        },
+        {
+          "text": "Hey twin"
+        },
+        {
+          "text": "Hey you"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "Hi advisor"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "hiya"
+        },
+        {
+          "text": "How are things going?"
+        },
+        {
+          "text": "How are you today?"
+        },
+        {
+          "text": "How have you been?"
+        },
+        {
+          "text": "How is it going?"
+        },
+        {
+          "text": "How r u?"
+        },
+        {
+          "text": "Looking good eve"
+        },
+        {
+          "text": "Ok take me back"
+        },
+        {
+          "text": "What's new?"
+        },
+        {
+          "text": "What's up?"
+        },
+        {
+          "text": "Who is this?"
+        },
+        {
+          "text": "yo"
+        },
+        {
+          "text": "You there"
+        }
+      ]
+    },
+    {
+      "intent": "GHHS_Application_Approval_Time",
+      "examples": [
+        {
+          "text": "app approval time"
+        },
+        {
+          "text": "application approval time"
+        },
+        {
+          "text": "approval time"
+        },
+        {
+          "text": "how long is the application process"
+        },
+        {
+          "text": "How long is the process?"
+        },
+        {
+          "text": "How long to review application till approval?"
+        },
+        {
+          "text": "How long will approval take?"
+        },
+        {
+          "text": "How long will it take?"
+        },
+        {
+          "text": "How long will it take before I know if I am eligible for DSNAP for COVID-19?"
+        },
+        {
+          "text": "How long will it take before I'm approved?"
+        },
+        {
+          "text": "How long will it take for approval to go through?"
+        },
+        {
+          "text": "What happens after I submit my application"
+        },
+        {
+          "text": "What is the average approval time frame?"
+        },
+        {
+          "text": "What's the application approval time?"
+        },
+        {
+          "text": "What the approval time?"
+        },
+        {
+          "text": "when will I know if I'm eligible?"
+        }
+      ]
+    },
+    {
+      "intent": "GHHS_Application_Save_Progress",
+      "examples": [
+        {
+          "text": "can i save my application?"
+        },
+        {
+          "text": "can i save my application progress?"
+        },
+        {
+          "text": "Can I save my progress?"
+        },
+        {
+          "text": "If I have to abandon my application, can I save my progress?"
+        },
+        {
+          "text": "save application progress"
+        },
+        {
+          "text": "the application is too long, can i save it?"
+        },
+        {
+          "text": "what if i can't finish my application"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "GHHS_Doc_Upload",
+      "examples": [
+        {
+          "text": "can i upload a bmp?"
+        },
+        {
+          "text": "can i upload a docx?"
+        },
+        {
+          "text": "can i upload a jpeg?"
+        },
+        {
+          "text": "can i upload a jpg?"
+        },
+        {
+          "text": "can i upload a pdf?"
+        },
+        {
+          "text": "can i upload a photo?"
+        },
+        {
+          "text": "can i upload a png?"
+        },
+        {
+          "text": "can i upload a word doc?"
+        },
+        {
+          "text": "can i upload a word document?"
+        },
+        {
+          "text": "can i upload docs?"
+        },
+        {
+          "text": "can i upload documents?"
+        },
+        {
+          "text": "can i upload files?"
+        },
+        {
+          "text": "can i use my camera to upload?"
+        },
+        {
+          "text": "How can i upload a document"
+        },
+        {
+          "text": "how can i upload doc"
+        },
+        {
+          "text": "How to upload docs?"
+        },
+        {
+          "text": "How to upload documents?"
+        },
+        {
+          "text": "what kind of docs can i upload?"
+        },
+        {
+          "text": "what kinds of documents can I upload?"
+        },
+        {
+          "text": "when do i upload my documents"
+        },
+        {
+          "text": "where are my docs?"
+        },
+        {
+          "text": "where are my documents?"
+        },
+        {
+          "text": "where can i see my documents?"
+        },
+        {
+          "text": "where do i upload doc"
+        },
+        {
+          "text": "where do i upload documents"
+        }
+      ],
+      "description": "Answer questions about doc upload"
+    },
+    {
+      "intent": "GHHS_Doc_Upload_Error",
+      "examples": [
+        {
+          "text": "document upload error"
+        },
+        {
+          "text": "document upload issue"
+        },
+        {
+          "text": "doc upload error"
+        },
+        {
+          "text": "doc upload issue"
+        },
+        {
+          "text": "error uploading doc"
+        },
+        {
+          "text": "error uploading document"
+        },
+        {
+          "text": "file error"
+        },
+        {
+          "text": "file upload error"
+        },
+        {
+          "text": "having issues uploading my files"
+        },
+        {
+          "text": "i can't upload anything"
+        },
+        {
+          "text": "i can't upload files"
+        },
+        {
+          "text": "i can't upload my file"
+        },
+        {
+          "text": "i get an error when i try to upload a doc"
+        },
+        {
+          "text": "i get an error when i try to upload a document"
+        },
+        {
+          "text": "issues uploading files"
+        },
+        {
+          "text": "my doc is not uploading?"
+        },
+        {
+          "text": "my document is not uploading?"
+        },
+        {
+          "text": "why can't i upload my file?"
+        },
+        {
+          "text": "why don't my docs upload?"
+        },
+        {
+          "text": "why don't my documents upload?"
+        },
+        {
+          "text": "why won't my docs upload?"
+        },
+        {
+          "text": "why won't my documents upload?"
+        }
+      ],
+      "description": "Respond to any question about why documents are not uploading"
+    },
+    {
+      "intent": "GHHS_Life_Event",
+      "examples": [
+        {
+          "text": "change of circ"
+        },
+        {
+          "text": "change profile"
+        },
+        {
+          "text": "how can i report change of circumstance"
+        },
+        {
+          "text": "how do i submit a life event?"
+        },
+        {
+          "text": "how do i update my address?"
+        },
+        {
+          "text": "if I move, do i need to tell my caseworker?"
+        },
+        {
+          "text": "i need to update my case"
+        },
+        {
+          "text": "I recently moved, do I have to report it?"
+        },
+        {
+          "text": "my circumstances have changed"
+        },
+        {
+          "text": "report new information"
+        },
+        {
+          "text": "update info on my case"
+        },
+        {
+          "text": "update information"
+        },
+        {
+          "text": "update my case"
+        },
+        {
+          "text": "update profile"
+        }
+      ],
+      "description": "Describe the general process of life events and what's available"
+    },
+    {
+      "intent": "GHHS_Program_Summary",
+      "examples": [
+        {
+          "text": "what is disaster snap"
+        },
+        {
+          "text": "What is DSNAP?"
+        },
+        {
+          "text": "what is food assistance"
+        },
+        {
+          "text": "what is food stamps"
+        },
+        {
+          "text": "what is medicaid"
+        },
+        {
+          "text": "what is Obama Care"
+        },
+        {
+          "text": "What is pandemic assistance?"
+        },
+        {
+          "text": "what is SNAP"
+        },
+        {
+          "text": "what is supplemental nutrition assistance"
+        },
+        {
+          "text": "what is supplemental nutrition assistance program"
+        },
+        {
+          "text": "what is tanf?"
+        },
+        {
+          "text": "what is the food assistance program"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "GHHS_Required_Documentation",
+      "examples": [
+        {
+          "text": "Are there documents that I need to provide"
+        },
+        {
+          "text": "Does the application require me to send in documents"
+        },
+        {
+          "text": "how do i verify my information?"
+        },
+        {
+          "text": "required documentation"
+        },
+        {
+          "text": "what are the documents I need to apply"
+        },
+        {
+          "text": "what documentation is needed"
+        },
+        {
+          "text": "what documents are needed"
+        },
+        {
+          "text": "what documents do I need"
+        },
+        {
+          "text": "what documents do i need for verification?"
+        },
+        {
+          "text": "What documents do I need to apply?"
+        },
+        {
+          "text": "what documents do I need to apply for unemployment benefits"
+        },
+        {
+          "text": "What documents do I need to file an unemployment claim"
+        },
+        {
+          "text": "what documents will I need to apply"
+        },
+        {
+          "text": "what documents will I need to apply for unemployment benefits"
+        },
+        {
+          "text": "What do I have to provide to apply?"
+        },
+        {
+          "text": "What do I need to apply?"
+        },
+        {
+          "text": "What do I need to send with my claim?"
+        },
+        {
+          "text": "what information do I need for my application"
+        },
+        {
+          "text": "what information do I need to apply"
+        },
+        {
+          "text": "what information do i need to provide"
+        },
+        {
+          "text": "what information do i need to provide to apply"
+        },
+        {
+          "text": "What information is needed for an application?"
+        },
+        {
+          "text": "What items do I need to turn in"
+        },
+        {
+          "text": "What items do I need to turn in with my DSNAP application for COVID-19?"
+        },
+        {
+          "text": "what proof do i need to provide"
+        },
+        {
+          "text": "What set of information do I need to apply?"
+        },
+        {
+          "text": "What's needed in an application?"
+        },
+        {
+          "text": "Which documents should I submit"
+        },
+        {
+          "text": "why do i need to provide income"
+        },
+        {
+          "text": "why is income needed for my application"
+        }
+      ]
+    },
+    {
+      "intent": "GHHS_Speak_to_Agent",
+      "examples": [
+        {
+          "text": "agent"
+        },
+        {
+          "text": "can i get someone on the phone?"
+        },
+        {
+          "text": "Can i speak to someone?"
+        },
+        {
+          "text": "can i talk to someone?"
+        },
+        {
+          "text": "chat with agent"
+        },
+        {
+          "text": "chat with live agent"
+        },
+        {
+          "text": "is there a live person i can talk with?"
+        },
+        {
+          "text": "i want to speak to a human being"
+        },
+        {
+          "text": "i want to speak to a live person"
+        },
+        {
+          "text": "i want to talk to a human being"
+        },
+        {
+          "text": "i want to talk to a live person"
+        },
+        {
+          "text": "need to talk to a live person"
+        },
+        {
+          "text": "representative"
+        },
+        {
+          "text": "speak to someone"
+        }
+      ],
+      "description": "to address specific questions that cannot be handled by the chatbot"
+    },
+    {
+      "intent": "GHHS_Update_After_Submission",
+      "examples": [
+        {
+          "text": "Can I change information on my application?"
+        },
+        {
+          "text": "Can I update my information after I submit"
+        },
+        {
+          "text": "how do i change my application?"
+        },
+        {
+          "text": "how do i update my app?"
+        },
+        {
+          "text": "If I made a mistake, can I change the information I submitted in my application?"
+        },
+        {
+          "text": "I made a mistake on the application"
+        },
+        {
+          "text": "I need to update my application"
+        }
+      ],
+      "description": "related to GHHS_Application_Approval.  Specifically to answer if updates can be made after submission"
+    },
+    {
+      "intent": "Goodbye",
+      "examples": [
+        {
+          "text": "arrivederci"
+        },
+        {
+          "text": "bye"
+        },
+        {
+          "text": "Bye bye"
+        },
+        {
+          "text": "ciao"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "I'm all set"
+        },
+        {
+          "text": "Nothing else"
+        },
+        {
+          "text": "Okay, I'm done"
+        },
+        {
+          "text": "see ya"
+        },
+        {
+          "text": "See you"
+        },
+        {
+          "text": "so long"
+        },
+        {
+          "text": "Thanks, that's all i needed"
+        },
+        {
+          "text": "That's all"
+        }
+      ]
+    },
+    {
+      "intent": "Help",
+      "examples": [
+        {
+          "text": "can i talk to someone?"
+        },
+        {
+          "text": "can you assist me"
+        },
+        {
+          "text": "can you help"
+        },
+        {
+          "text": "help"
+        },
+        {
+          "text": "help me"
+        },
+        {
+          "text": "help me decide"
+        },
+        {
+          "text": "I can't find what I'm looking for"
+        },
+        {
+          "text": "i need assistance"
+        },
+        {
+          "text": "speak to rep"
+        },
+        {
+          "text": "talk to someone"
+        },
+        {
+          "text": "what can i do"
+        },
+        {
+          "text": "what can i say"
+        },
+        {
+          "text": "what can you answer"
+        },
+        {
+          "text": "what do i ask"
+        },
+        {
+          "text": "what else can i ask?"
+        },
+        {
+          "text": "what kind of questions can i ask"
+        },
+        {
+          "text": "what kind of questions can you answer"
+        },
+        {
+          "text": "what's my caseworker's number?"
+        },
+        {
+          "text": "what's the number to my office?"
+        },
+        {
+          "text": "what's the number to the closest office?"
+        }
+      ]
+    },
+    {
+      "intent": "No",
+      "examples": [
+        {
+          "text": "incorrect"
+        },
+        {
+          "text": "no"
+        },
+        {
+          "text": "nope"
+        },
+        {
+          "text": "not true"
+        },
+        {
+          "text": "nuh uh"
+        },
+        {
+          "text": "that is incorrect"
+        }
+      ]
+    },
+    {
+      "intent": "SPL_Change_Username",
+      "examples": [
+        {
+          "text": "Can I change the email address associated with the account?"
+        },
+        {
+          "text": "can I update my email address?"
+        },
+        {
+          "text": "can I update my username?"
+        },
+        {
+          "text": "how do I update my email address?"
+        },
+        {
+          "text": "how do i update my username?"
+        }
+      ],
+      "description": "The user wants to change his/her email address associated with the account"
+    },
+    {
+      "intent": "SPL_Create_Account",
+      "examples": [
+        {
+          "text": "can I create my account?"
+        },
+        {
+          "text": "do I need an account?"
+        },
+        {
+          "text": "How do I create an account?"
+        },
+        {
+          "text": "How to create new account"
+        },
+        {
+          "text": "where do i create my account?"
+        }
+      ],
+      "description": "General intent around account creation"
+    },
+    {
+      "intent": "SPL_Find_Office",
+      "examples": [
+        {
+          "text": "Find my office"
+        },
+        {
+          "text": "find the closest location"
+        },
+        {
+          "text": "find the closest office"
+        },
+        {
+          "text": "what's the location closest to me"
+        },
+        {
+          "text": "whats the office closest to me"
+        },
+        {
+          "text": "where is the closest location?"
+        },
+        {
+          "text": "Where is the closest office?"
+        }
+      ],
+      "description": "Intent around locating the closest office"
+    },
+    {
+      "intent": "SPL_Multiple_Accounts",
+      "examples": [
+        {
+          "text": "can i create another account?"
+        },
+        {
+          "text": "Can I create several accounts"
+        },
+        {
+          "text": "Can I have multiple accounts?"
+        },
+        {
+          "text": "I need to create a another account"
+        },
+        {
+          "text": "More than one account?"
+        }
+      ],
+      "description": "To address having multiple accounts for one user"
+    },
+    {
+      "intent": "SPL_Password",
+      "examples": [
+        {
+          "text": "create a password"
+        },
+        {
+          "text": "forgot my password"
+        },
+        {
+          "text": "forgot password"
+        },
+        {
+          "text": "modify my password"
+        },
+        {
+          "text": "new password"
+        },
+        {
+          "text": "reset my password"
+        },
+        {
+          "text": "reset password"
+        },
+        {
+          "text": "update my password"
+        }
+      ],
+      "description": "Intent is to manage the password"
+    },
+    {
+      "intent": "SPL_Program_Eligibility",
+      "examples": [
+        {
+          "text": "am i eligible"
+        },
+        {
+          "text": "Am I eligible?"
+        },
+        {
+          "text": "am I eligible for"
+        },
+        {
+          "text": "am i eligible for assistance"
+        },
+        {
+          "text": "am i eligible for food assistance"
+        },
+        {
+          "text": "am i eligible for medicaid"
+        },
+        {
+          "text": "am i eligible for pandemic assistance"
+        },
+        {
+          "text": "am i eligible for snap"
+        },
+        {
+          "text": "am i eligible for tanf"
+        },
+        {
+          "text": "How can I apply?"
+        },
+        {
+          "text": "How do I apply for a program"
+        },
+        {
+          "text": "how do I apply for assistance?"
+        },
+        {
+          "text": "How do I know if I'm eligible for a program?"
+        },
+        {
+          "text": "what is the eligibility criteria for this program"
+        },
+        {
+          "text": "what programs am I eligible for?"
+        },
+        {
+          "text": "what programs can I apply for?"
+        },
+        {
+          "text": "what programs do you offer?"
+        },
+        {
+          "text": "Which programs am I eligible for?"
+        }
+      ],
+      "description": "Generic intent around program eligibility and application"
+    },
+    {
+      "intent": "SPL_Start_New_Search",
+      "examples": [
+        {
+          "text": "Start again"
+        }
+      ],
+      "description": "Start a new search"
+    },
+    {
+      "intent": "Thanks",
+      "examples": [
+        {
+          "text": "i appreciate it"
+        },
+        {
+          "text": "many thanks"
+        },
+        {
+          "text": "much appreciated"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "Thank you for your help"
+        },
+        {
+          "text": "thank you very much"
+        },
+        {
+          "text": "that's nice of you"
+        },
+        {
+          "text": "thx"
+        }
+      ]
+    },
+    {
+      "intent": "yes",
+      "examples": [
+        {
+          "text": "affirmative"
+        },
+        {
+          "text": "that's correct"
+        },
+        {
+          "text": "that's right"
+        },
+        {
+          "text": "uh huh"
+        },
+        {
+          "text": "yeah"
+        },
+        {
+          "text": "yep"
+        },
+        {
+          "text": "yes"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "account",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "account",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "create account",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "application",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "application",
+          "synonyms": [
+            "app",
+            "form",
+            "intake"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "fileType",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "audio",
+          "synonyms": [
+            "aac",
+            "m4a",
+            "mp3",
+            "wav",
+            "wma"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "document",
+          "synonyms": [
+            "doc",
+            "docx",
+            "odt",
+            "pdf",
+            "ppt",
+            "pptx",
+            "txt",
+            "xls",
+            "xlsx"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "photo",
+          "synonyms": [
+            "bmp",
+            "heic",
+            "hief",
+            "jpeg",
+            "jpg",
+            "png",
+            "raw",
+            "svg",
+            "tiff"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "video",
+          "synonyms": [
+            "avi",
+            "f4v",
+            "flv",
+            "mov",
+            "mpeg",
+            "mpg"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "HowDoI",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "How",
+          "synonyms": [
+            "How can I",
+            "How do I"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "identificationIDType",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Drivers",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Drivers License",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Drivers License Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "identificationIDType",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "License",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pass",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Passport",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Passport Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ref",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Reference No.",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Reference Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Social Security",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Social Security Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "SSN",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "identifier",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Case Ref",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "identifier",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "password",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "update",
+          "synonyms": [
+            "delete password",
+            "modify password",
+            "reset password",
+            "update password"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "program",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "apply",
+          "patterns": [
+            "apply for program",
+            "apply",
+            "application"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "eligible",
+          "synonyms": [
+            "eligibility",
+            "eligible",
+            "eligible for program",
+            "program eligibility"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "programType",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ChildCare",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Disaster",
+          "synonyms": [
+            "Disaster",
+            "D-SNAP",
+            "DSNAP"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "FoodStamps",
+          "synonyms": [
+            "Food Assistance",
+            "SNAP"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "MedicalAssistance",
+          "synonyms": [
+            "Medicaid",
+            "Medical Assistance"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "RentalAssistance",
+          "synonyms": [
+            "Housing Assistance",
+            "Rental Assistance"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "TANF",
+          "synonyms": [
+            "TANF",
+            "Temporary Assistance to Needy Families"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "representative",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "rep",
+          "synonyms": [
+            "agent",
+            "caseworker",
+            "employee",
+            "rep",
+            "representative",
+            "worker"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "type",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "App Case",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Application Case",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Case",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Case Ref",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Drivers",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Driver's License",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Drivers License",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "IC",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Income Support",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Integrated Case",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "License",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "License Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pass",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Passport",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Passport Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ref",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Reference No.",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Reference Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ref No.",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ref Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Social Security",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Social Security Number",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "SSN",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "type",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "verificationType",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Expense",
+          "synonyms": [
+            "landlord agreement",
+            "lease agreement",
+            "property bill",
+            "property tax",
+            "rent receipt",
+            "utility bill"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Identity",
+          "synonyms": [
+            "Driver License",
+            "Driver's License",
+            "driving license",
+            "ID",
+            "License",
+            "passport"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Income",
+          "synonyms": [
+            "employment",
+            "pay stub",
+            "paystub",
+            "wage statement"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Resource",
+          "synonyms": [
+            "Bank Statement"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "zip_code",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "zip",
+          "patterns": [
+            "^\\d{5}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, I didn't understand that."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "I do understand questions about creating an account, submitting an application, your benefits and payments and other frequently asked questions. "
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Type or choose an option to continue."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1625571656896"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_9_1625571656896",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please enter your zip code"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_5_1634325424019",
+      "context": {
+        "mapQuery": "Department+Social+Services",
+        "mapApiKey": "AIzaSyB21KMA8mssSzzBJQ--s0fwEvrvf8KvKEg"
+      },
+      "event_name": "focus",
+      "dialog_node": "handler_10_1634325424036",
+      "previous_sibling": "handler_3_1634325424036"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1634325424019",
+      "context": {
+        "zipCode": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_3_1634325424036"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please enter a valid zip code"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1634324583239",
+      "disabled": true,
+      "event_name": "focus",
+      "dialog_node": "handler_4_1634325423651",
+      "previous_sibling": "response_10_1634329445390"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You must enter a 5 digit zip code.  Lets try again."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_5_1634325424019",
+      "next_step": {
+        "behavior": "reprompt"
+      },
+      "conditions": "input.text.length() != 5",
+      "event_name": "filled",
+      "dialog_node": "handler_8_1634330500506",
+      "previous_sibling": "handler_10_1634325424036"
+    },
+    {
+      "type": "standard",
+      "title": "Program Specific Response",
+      "parent": "node_7_1634574962451",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@programType",
+      "dialog_node": "node_10_1634575393741",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Multiple accounts",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "For security reasons, you can have only one account.   "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "I forgot my password",
+                "value": {
+                  "input": {
+                    "text": "Forgot Password"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1634313721003",
+      "conditions": "#SPL_Multiple_Accounts",
+      "dialog_node": "node_10_1634579782229",
+      "previous_sibling": "node_1_1634321303531"
+    },
+    {
+      "type": "standard",
+      "title": "Document upload issues",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "There are various reasons you could have upload issues. Make sure you are following the upload process correctly. Also, documents submitted through this service are subject to review and will not be included if they appear to contain a virus or malware. It is your responsibility to make sure documents were submitted with your application."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1634313721003",
+      "conditions": "#GHHS_Doc_Upload_Error",
+      "dialog_node": "node_10_1635454862559",
+      "previous_sibling": "node_5_1635182219950"
+    },
+    {
+      "type": "standard",
+      "title": "Verification documents",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You will need to provide documents to verify identity (e.g., license, Identification card), utility bills, and social security information. The exact documents you need to provide will determine what you have shared in your application. For example, if you pay rent, you will need to provide proof. If you don't pay rent, this is not a required document."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "How to upload documents?",
+                "value": {
+                  "input": {
+                    "text": "How to upload documents?"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1634313721003",
+      "conditions": "#GHHS_Required_Documentation",
+      "dialog_node": "node_10_1635459326086",
+      "previous_sibling": "node_10_1635454862559"
+    },
+    {
+      "type": "standard",
+      "title": "Update password",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Clicking <a href=forgot-password>here</a> to reset your password.  Note that you will need to provide the answer to your secret question from when you created the account."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "If you forgot your secret answer or you still need help accessing your account, you may call our Help Desk at 1-800-I-FORGOT"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1634313721003",
+      "conditions": "#SPL_Password",
+      "dialog_node": "node_1_1634321303531",
+      "previous_sibling": "node_7_1634316346529"
+    },
+    {
+      "type": "standard",
+      "title": "Change Username",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "If you used your email address as your username when you created the account, you will need to call the help desk to help. you with that.  "
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "However, if you are looking to modify the email address you used in your intake application or add a new email address for contact purposes, you can initiate a Life Event by navigating to the <a href=profile>profile</a> page and updating your profile. "
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Note that you will need to be logged into your account first."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1634313721003",
+      "conditions": "#SPL_Change_Username",
+      "dialog_node": "node_1_1635177949864",
+      "previous_sibling": "node_10_1634579782229"
+    },
+    {
+      "type": "standard",
+      "title": "What is SNAP?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<strong>SNAP</strong></br>\n<ul><li>Supplemental Nutrition Assistance Program (SNAP) - monthly benefits that help eligible low-income households buy the food they need for good health.  This program is also known as Food Stamps or Food Assistance</li></ul>\nYou can apply for, or screen yourself, for Food Assistance on this website by navigating to the following links:\n<ul><li><a href=\"/CE/eligibility\">Screen for Food Assistance</a></li><li><a href=\"/CE/apply\">Apply for Food Assistance</a></li></ul>\nFurther information can be found on the <a href=\"https://www.fns.usda.gov/snap/supplemental-nutrition-assistance-program\" target=\"_blank\">USDA website</a>. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "What is Disaster SNAP?",
+                "value": {
+                  "input": {
+                    "text": "What is D-SNAP?"
+                  }
+                }
+              },
+              {
+                "label": "Am I eligible for SNAP?",
+                "value": {
+                  "input": {
+                    "text": "Am I eligible for SNAP?"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1635184514109",
+      "conditions": "#GHHS_Program_Summary && @programType:FoodStamps",
+      "dialog_node": "node_1_1635184545201",
+      "previous_sibling": "node_2_1635184547270"
+    },
+    {
+      "type": "standard",
+      "title": "What is D-SNAP?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Because of the unique needs of disaster survivors, D-SNAP uses different standards than normal SNAP. If you would not normally qualify for SNAP, you may qualify for D-SNAP if you had one of the disaster-related expenses below:\n<ul><li>Home or business repairs\n<li>Temporary shelter expenses\n<li>Evacuation or relocation expenses\n<li>Home or business protection\n<li>Disaster-related personal injury, including funeral expenses\n<li>Lost or no access to income due to the disaster, including reduced, terminated, or delayed receipt of income, for a large part of the benefit period\n<li>In some cases, food loss after a disaster like flooding or power outages</ul>\nIf you’re a current SNAP client, you can request a supplement when your state operates a D-SNAP if you meet the conditions below:\n<ul><li>You currently get benefits that are less than the monthly maximum, and\n<li>You have losses from the disaster.\nThe supplement brings your benefits up to the maximum for your household size. This way benefits are equal between D-SNAP and SNAP households after a disaster. \nCurrent SNAP clients may also request replacement benefits for food that was lost in the disaster and bought with SNAP benefits. Just contact your local office.\n</br>For more information, visit:  <a href=\"https://www.disasterassistance.gov/get-assistance/forms-of-assistance/5769\" target=\"_blank\">DisasterAssistance.gov</a>."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "Am I eligible for SNAP?",
+                "value": {
+                  "input": {
+                    "text": "Am I eligible for SNAP?"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1635184514109",
+      "conditions": "#GHHS_Program_Summary && @programType:Disaster",
+      "dialog_node": "node_1_1635443680795",
+      "previous_sibling": "node_1_1635184545201"
+    },
+    {
+      "type": "folder",
+      "title": "Account FAQs",
+      "conditions": "",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1634313721003",
+      "previous_sibling": "node_7_1634574853740"
+    },
+    {
+      "type": "standard",
+      "title": "Eligible for Program",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The best way to determine which programs are available to help with your situation is to take a short screening assessment.  The assessment will take less than 5 minutes.  Click <a href=/CE/eligibility>here</a> to start the <strong>benefits screening assessment</strong>."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1634313761378",
+      "conditions": "#SPL_Program_Eligibility && (@program:eligible || @programType)",
+      "dialog_node": "node_2_1634318165961",
+      "previous_sibling": "node_4_1634316824738"
+    },
+    {
+      "type": "standard",
+      "title": "What is Medicaid",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Medicaid, also known as Medical Assistance, provides health coverage to millions of Americans, including eligible low-income adults, children, pregnant women, elderly adults and people with disabilities. Medicaid is administered by states, according to federal requirements. The program is funded jointly by states and the federal government.\n</br><a href=\"https://www.medicaid.gov/medicaid/index.html\" target=\"_blank\">Read More</a>."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "Am I eligible for Medicaid?",
+                "value": {
+                  "input": {
+                    "text": "Am I eligible for Medicaid?"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1635184514109",
+      "conditions": "#GHHS_Program_Summary && @programType:MedicalAssistance",
+      "dialog_node": "node_2_1635184547270",
+      "previous_sibling": "node_9_1635184525796"
+    },
+    {
+      "type": "standard",
+      "title": "Talk to someone",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "If you can't find the answers to your questions using this chatbot, you can call the main office at 1-800-555-HELP."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "You can also visit your closest office and talk to someone"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "Find the closest office",
+                "value": {
+                  "input": {
+                    "text": "Find the closest office"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_6_1635461666641",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#GHHS_Speak_to_Agent",
+      "dialog_node": "node_2_1635461129906",
+      "previous_sibling": "node_7_1624455884262"
+    },
+    {
+      "type": "standard",
+      "title": "Sign Off",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great to chat to you,"
+              },
+              {
+                "text": "If you need anything else let me know."
+              },
+              {
+                "text": "Talk soon!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#Goodbye",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1622130829738",
+      "previous_sibling": "node_9_1622130843066"
+    },
+    {
+      "type": "standard",
+      "title": "Apply for program",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The most direct way to apply for any program is to click on <a href=/CE/apply>Apply for benefits</a> link on the home page. "
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "If you are not sure what programs you can apply for, you may start out by clicking on the <a href=/CE/eligibility>Check what you might get</a> link from the home page.   This will allow you to screen yourself for potential eligibility to various programs and services offered.   "
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1634313761378",
+      "conditions": "#SPL_Program_Eligibility && @program:apply",
+      "dialog_node": "node_4_1634316824738"
+    },
+    {
+      "type": "folder",
+      "title": "General FAQs",
+      "conditions": "",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1635184514109",
+      "previous_sibling": "node_6_1635461666641"
+    },
+    {
+      "type": "standard",
+      "title": "Submit Life Event",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can submit the following changes: Change of Address, Changes to Phone Number(s) or Email Address, Changes to Household Composition, Changes to Expenses, and Changes to Income or Assets."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Keeping your information updated is critical to ensuring you get your benefits each month. Please be sure to report any changes in a timely manner."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "If you have an account, you can log in and submit life events by clicking <a href=\"profile\">here</a>."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1634313721003",
+      "conditions": "#GHHS_Life_Event",
+      "dialog_node": "node_5_1635181020025",
+      "previous_sibling": "node_1_1635177949864"
+    },
+    {
+      "type": "standard",
+      "title": "How to upload documents",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can upload a document one of three ways:\n<ol><li>Take a photo using your device's camera.</li><li>Select an existing photo from your device.</li><li>Select a file from your device.</li></ol>For more information, view a user guide here."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "You can upload the following types of files: <ul><li>PDF document</li><li>Photo (E.g., PNG or JPEG)</li></ul>Currently, you can upload a file of the aforementioned type if it is less than 5 MB in size."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "Upload issues",
+                "value": {
+                  "input": {
+                    "text": "Upload issues"
+                  }
+                }
+              },
+              {
+                "label": "What documents do I need to apply?",
+                "value": {
+                  "input": {
+                    "text": "What documents do I need to apply?"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1634313721003",
+      "conditions": "#GHHS_Doc_Upload",
+      "dialog_node": "node_5_1635182219950",
+      "previous_sibling": "node_5_1635181020025"
+    },
+    {
+      "type": "standard",
+      "title": "Start New Search",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok, let's start again, type or choose an option to continue."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1625571656896"
+      },
+      "conditions": "#SPL_Start_New_Search",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1623783968080",
+      "previous_sibling": "node_9_1634324583239"
+    },
+    {
+      "type": "folder",
+      "title": "Program Eligibility FAQs",
+      "conditions": "#SPL_Program_Eligibility",
+      "dialog_node": "node_6_1634313761378",
+      "previous_sibling": "node_4_1635184514109"
+    },
+    {
+      "type": "standard",
+      "title": "Update to my application",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You have the ability to update your information in the 'Review' screen before you submit your application. So please be sure to review, because once you submit, you will need to submit a change of circumstance to make a change to your application."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "How do I create an account?",
+                "value": {
+                  "input": {
+                    "text": "How do I create an account?"
+                  }
+                }
+              },
+              {
+                "label": "How do I submit a life event?",
+                "value": {
+                  "input": {
+                    "text": "How do I submit a life event?"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_7_1634574853740",
+      "conditions": "#GHHS_Update_After_Submission",
+      "dialog_node": "node_6_1635179951079",
+      "previous_sibling": "node_7_1634574962451"
+    },
+    {
+      "type": "folder",
+      "title": "Help Folder",
+      "dialog_node": "node_6_1635461666641",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Help",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I'm here to help you with answers to frequently asked questions"
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "You can ask questions about creating an account, submitting an application, your benefits and payments and other frequently asked questions. You can also find an office closest to you to get more personalized help."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "You can use Ctrl+F to find specific text in my responses."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Type or select an option to continue."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "What programs am I eligible for?",
+                "value": {
+                  "input": {
+                    "text": "What programs am I eligible for?"
+                  }
+                }
+              },
+              {
+                "label": "How do I apply for assistance?",
+                "value": {
+                  "input": {
+                    "text": "How do I apply for assistance?"
+                  }
+                }
+              },
+              {
+                "label": "How do I create an account?",
+                "value": {
+                  "input": {
+                    "text": "How do I create an account?"
+                  }
+                }
+              },
+              {
+                "label": "Find my closest office.",
+                "value": {
+                  "input": {
+                    "text": "Find my office"
+                  }
+                }
+              },
+              {
+                "label": "How do I upload documents?",
+                "value": {
+                  "input": {
+                    "text": "How do I upload documents?"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_6_1635461666641",
+      "conditions": "#Help",
+      "dialog_node": "node_7_1624455884262"
+    },
+    {
+      "type": "standard",
+      "title": "Create an account",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can create a self-service account by clicking on the <a href=signup>Sign Up</a> link on top.  Then simply provide your account details such as user name and password. "
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Note that a caseworker will need to link your account to your application in order to access more robust features such as Payments, Notices, Change of Circumstances, and more.    Click <a href=\"https://cdss.ca.gov\" target=\"_blank\">here</a> to learn more about your account."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "I forgot my password",
+                "value": {
+                  "input": {
+                    "text": "I forgot my password"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1634313721003",
+      "conditions": "#SPL_Create_Account",
+      "dialog_node": "node_7_1634316346529"
+    },
+    {
+      "type": "folder",
+      "title": "Application FAQs",
+      "conditions": "#GHHS_Application_Approval_Time || #GHHS_Update_After_Submission || #GHHS_Application_Save_Progress",
+      "dialog_node": "node_7_1634574853740",
+      "previous_sibling": "node_6_1634313761378"
+    },
+    {
+      "type": "standard",
+      "title": "Application approval time",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "In general, once you submit the application, you may be required to upload documents to provide proof of eligibility.  For example, a drivers license to show you are a resident of the state.  \n\nDepending on which program you have applied for, there may be additional steps required.   Click options below to learn more about specific programs.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Program Area",
+            "options": [
+              {
+                "label": "Temporary Assistance to Needy Families (TANF)",
+                "value": {
+                  "input": {
+                    "text": "TANF"
+                  }
+                }
+              },
+              {
+                "label": "Food Assistance",
+                "value": {
+                  "input": {
+                    "text": "FoodStamps"
+                  }
+                }
+              },
+              {
+                "label": "Medical Assistance",
+                "value": {
+                  "input": {
+                    "text": "MedicalAssistance"
+                  }
+                }
+              },
+              {
+                "label": "Child Care Assistance",
+                "value": {
+                  "input": {
+                    "text": "ChildCare"
+                  }
+                }
+              },
+              {
+                "label": "Rental Assistance",
+                "value": {
+                  "input": {
+                    "text": "RentalAssistance"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_7_1634574853740",
+      "conditions": "#GHHS_Application_Approval_Time",
+      "dialog_node": "node_7_1634574962451"
+    },
+    {
+      "type": "standard",
+      "title": "Thanks",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You're welcome, talk soon!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#Thanks",
+      "dialog_node": "node_9_1622130843066",
+      "previous_sibling": "node_6_1623783968080"
+    },
+    {
+      "type": "standard",
+      "title": "Restart Options",
+      "output": {
+        "generic": [
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "How do I create an account?",
+                "value": {
+                  "input": {
+                    "text": "How do I create an account?"
+                  }
+                }
+              },
+              {
+                "label": "How do I apply for assistance?",
+                "value": {
+                  "input": {
+                    "text": "How do I apply for assistance?"
+                  }
+                }
+              },
+              {
+                "label": "Which programs am I eligible for?",
+                "value": {
+                  "input": {
+                    "text": "Which programs am I eligible for?"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1625571656896",
+      "previous_sibling": "node_4_1622130829738",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "title": "Map Office by Zip Code",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Click the link below to view the map"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "Offices nearest you",
+            "source": "https://www.google.com/maps/embed/v1/place?key=$mapApiKey&q=$mapQuery,$zipCode&zoom=12",
+            "response_type": "iframe"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#SPL_Find_Office",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1634324583239",
+      "previous_sibling": "node_2_1634313721003"
+    },
+    {
+      "type": "standard",
+      "title": "What is TANF",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "TANF stands for Temporary Assistance for Needy Families.\n\nThe TANF program, which is time limited, assists families with children when the parents or other responsible relatives cannot provide for the family's basic needs. The Federal government provides grants to States to run the TANF program. These State TANF programs are designed to accomplish four goals:\n<ol>\n<li>to provide assistance to needy families so that children may be cared for in their own homes or in the homes of relatives;\n<li>to end the dependency of needy parents on government benefits by promoting job preparation, work, and marriage;\n<li>to prevent and reduce the incidence of out-of-wedlock pregnancies and establish annual numerical goals for preventing and reducing the incidence of these pregnancies; and\n<li>to encourage the formation and maintenance of two-parent families.</ol>\nStates have broad flexibility to carry out their programs. The States, not the Federal government, decide on the design of the program, the type and amount of assistance payments, the range of other services to be provided, and the rules for determining who is eligible for benefits.\n\n</br>See: <a href=\"https://www.acf.hhs.gov/ofa/help\" target=\"_blank\">Help for Families</a>.\nTo locate the nearest State or Tribal TANF program office, select your state from the drop-down list."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Related Questions",
+            "options": [
+              {
+                "label": "Am I eligible for TANF?",
+                "value": {
+                  "input": {
+                    "text": "Am I eligible for TANF?"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1635184514109",
+      "conditions": "#GHHS_Program_Summary && @programType:TANF",
+      "dialog_node": "node_9_1635184525796"
+    },
+    {
+      "type": "standard",
+      "title": "Save application progress",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "If you are logged into your account, you have the option to save your application progress by clicking on \"Exit\" on the top right corner of the application.    "
+              },
+              {
+                "text": "The next time you log in, you will be reminded to continue your application or start over.  "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1634574853740",
+      "conditions": "#GHHS_Application_Save_Progress",
+      "dialog_node": "node_9_1636503570013",
+      "previous_sibling": "node_6_1635179951079"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for entering $zipCode"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1634324583239",
+      "context": {
+        "zipCode": "<? input.text ?>"
+      },
+      "disabled": true,
+      "conditions": "@zip_code",
+      "dialog_node": "response_10_1634329445390",
+      "previous_sibling": "response_7_1634329930835"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agency to provide specific instructions for Child Care"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1634575393741",
+      "conditions": "@programType:ChildCare",
+      "dialog_node": "response_1_1634575644718",
+      "previous_sibling": "response_4_1634575624508"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agency to provide specific instructions for TANF"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1634575393741",
+      "conditions": "@programType:TANF",
+      "dialog_node": "response_3_1634575735142",
+      "previous_sibling": "response_4_1634575718562"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agency to provide specific instructions for Medical Assistance"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1634575393741",
+      "context": {
+        "programContext": "@programType"
+      },
+      "conditions": "@programType:MedicalAssistance",
+      "dialog_node": "response_4_1634575624508"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agency to provide specific instructions for Food Stamps"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1634575393741",
+      "conditions": "@programType:FoodStamps",
+      "dialog_node": "response_4_1634575718562",
+      "previous_sibling": "response_7_1634575699486"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi, I’m your Case Assistant, let me help you with some common questions."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "See pending verifications by case",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "See pending verifications by client",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              },
+              {
+                "label": "See case worker procedures",
+                "value": {
+                  "input": {
+                    "text": ""
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {},
+      "disabled": true,
+      "dialog_node": "response_5_1622125786155"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I'm here to help you with answers to frequently asked questions"
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "You can ask questions about programs and services offered, eligibility, account-related questions, and other frequently asked questions.   You can also find an office closest to you to get more personalized help.  "
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "You can use Ctrl+F to find specific text in my responses."
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Type or select an option to continue."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "What programs am I eligible for?",
+                "value": {
+                  "input": {
+                    "text": "What programs am I eligible for?"
+                  }
+                }
+              },
+              {
+                "label": "How do I apply for assistance?",
+                "value": {
+                  "input": {
+                    "text": "How do I apply for assistance?"
+                  }
+                }
+              },
+              {
+                "label": "How do I create an account?",
+                "value": {
+                  "input": {
+                    "text": "How do I create an account?"
+                  }
+                }
+              },
+              {
+                "label": "Find my closest office.",
+                "value": {
+                  "input": {
+                    "text": "Find my office"
+                  }
+                }
+              },
+              {
+                "label": "How do I upload documents?",
+                "value": {
+                  "input": {
+                    "text": "How do I upload documents?"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1635461129906",
+      "disabled": true,
+      "conditions": "#Help",
+      "dialog_node": "response_6_1635461142806"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please enter a valid 5 digit zip code"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1634324583239",
+      "disabled": true,
+      "conditions": "!(@sys-number)",
+      "dialog_node": "response_7_1634329930835"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agency to provide specific instructions for Rental Assistance"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1634575393741",
+      "conditions": "@programType:RentalAssistance",
+      "dialog_node": "response_7_1634575699486",
+      "previous_sibling": "response_1_1634575644718"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you want to speak to someone?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1635461129906",
+      "disabled": true,
+      "conditions": "#Help && @representative",
+      "dialog_node": "response_7_1635461169244",
+      "previous_sibling": "response_6_1635461142806"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1634324583239",
+      "variable": "$zipCode",
+      "dialog_node": "slot_5_1634325424019",
+      "previous_sibling": "handler_4_1634325423651"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi! I’m your virtual assistant. What can I help you with today?"
+              },
+              {
+                "text": "You can ask questions about creating an account, submitting an application, your benefits and payments and other frequently asked questions. "
+              },
+              {
+                "text": ""
+              },
+              {
+                "text": "Here are some examples of starter questions"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "How do I create an account?",
+                "value": {
+                  "input": {
+                    "text": "How do I create an account?"
+                  }
+                }
+              },
+              {
+                "label": "Find my closest office",
+                "value": {
+                  "input": {
+                    "text": "Find my closest office"
+                  }
+                }
+              },
+              {
+                "label": "Which programs am I eligible for?",
+                "value": {
+                  "input": {
+                    "text": "Which programs am I eligible for?"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "context": {},
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "1 Citizen Engagement Virtual Assistant",
+  "language": "en",
+  "description": "Citizen Assistant"
+}
