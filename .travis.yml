@@ -7,7 +7,7 @@ before_install:
 
 install:
   - npm install -g markdownlint-cli
-  - npm ci
+  - npm install --legacy-peer-deps
 
 script:
   - markdownlint **/*.mdx
