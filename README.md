@@ -2,4 +2,4 @@
 
 This repository contains the assets and the cookbook to integrate SPM with IBM Watson Assistant.
 
-The cookbook is available at this URL: [https://ibm.github.io/spm-chatbot/](https://ibm.github.io/spm-chatbot/)
+The cookbook is available at this URL: [https://merative.github.io/spm-chatbot)
