@@ -1,6 +1,6 @@
 const siteTitle = 'IBM Curam SPM Virtual Assistant'
 
-var sitePrefix = process.env.SITE_PREFIX || "/"
+var sitePrefix = process.env.SITE_PREFIX || "/spm-chatbot"
 console.log(`Using SITE_PREFIX: '${sitePrefix}'`)
 
 module.exports = {
