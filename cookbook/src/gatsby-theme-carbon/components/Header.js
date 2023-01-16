@@ -76,7 +76,7 @@ const Header = ({ children }) => {
 
 const DefaultHeaderText = () => (
   <>
-    IBM Cúram&nbsp;<span>SPM Virtual Assistant</span>
+    Merative&nbsp;<span>SPM Virtual Assistant</span>
   </>
 );
 
