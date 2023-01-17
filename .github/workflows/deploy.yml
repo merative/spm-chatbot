@@ -21,7 +21,7 @@ jobs:
           cd cookbook
           set -v
           pwd
-          npm install
+          npm install --legacy-peer-deps
           npm gatsby --version
           npm run build
           echo Site built and ready to deploy!
