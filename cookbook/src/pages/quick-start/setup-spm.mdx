@@ -1,6 +1,6 @@
 ---
-title: Integrating with IBM® Cúram Social Program Management (SPM)
-description: Integrating with IBM® Cúram Social Program Management (SPM)
+title: Integrating with Merative™ Social Program Management (SPM)
+description: Integrating with Merative™ Social Program Management (SPM)
 ---
 
 <InlineNotification>
@@ -20,14 +20,14 @@ The following list outlines the steps you need to follow to integrate with SPM:
 
 + **SPM deployed on IBM Websphere or Oracle Weblogic:**
 
-  If deploying SPM to a Websphere, Weblogic, or a Websphere Liberty standalone environment, the instructions can be found in the [IBM Documentation](https://www.ibm.com/docs/en/spm/8.0.0?topic=assistant-configuring-application-servers-json-web-tokens).
+  If deploying SPM to a Websphere, Weblogic, or a Websphere Liberty standalone environment, the instructions can be found in the [Documentation](https://www.ibm.com/docs/en/spm/8.0.0?topic=assistant-configuring-application-servers-json-web-tokens).
   
 + **SPM on Kubernetes:**
 
   The sample helm charts and files for SPM on Kubernetes contain the configurations for a keystore and self-signed certificate.
   These are used for both signing and trusting a JWT, and for configuring the Liberty server to use OpenIDConnect to validate a JWT on an incoming request.
   There are 2 properties in the configuration that need to be set. These are `apps.jwtConfig.issuerIdentifier` and `apps.jwtConfig.secretName`.
-  Further details about these properties are in the [SPM on Kubernetes guide](https://ibm.github.io/spm-kubernetes/deployment/config-reference/).
+  Further details about these properties are in the [SPM on Kubernetes guide](https://merative.github.io/spm-kubernetes/deployment/config-reference/).
   
 + **SPM running locally on Tomcat:**
 
