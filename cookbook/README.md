@@ -1,4 +1,4 @@
-# IBM Cúram Social Program Management (SPM) Virtual Assistant sample application and cookbook
+# Merative Social Program Management (SPM) Virtual Assistant sample application and cookbook
 
 This repository contains the assets and the cookbook to integrate SPM with IBM Watson Assistant.
 
